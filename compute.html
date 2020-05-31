@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+body {
+}
+
+li {
+margin-top: 0.5em !important;
+margin-bottom: 0.5em !important;
+}
+</style>
+<title>Computation</title>
+</head>
+<body>
+<div class="container-lg my-3">
+<h1>Resources on Computation<br>
+<small class="text-muted">Compiled by Gabriel Mihalache</small></h1>
+
+<p class="float-right"><a href="./index.html">Back to my website</a></p>
+
+<h2>Macroeconomics</h2>
+<ul>
+<li><a href="https://www.sas.upenn.edu/~jesusfv/teaching.html">Jes&uacute;s Fern&aacute;ndez-Villaverde</a> lecture nodes</li>
+<li><a href="http://www.wouterdenhaan.com/notes.htm#numerical">Wouter J. den Haan</a> lecture notes</li>
+<li><a href="https://quantecon.org/">QuantEcon:</a> theory, Python, Julia</li>
+<li><a href="https://github.com/sischei/OSM_Lab">Open Source Macroeconomics Laboratory Bootcamp</a> BFI, U Chicago</li>
+<li><a href="https://ideas.repec.org/s/red/ccodes.html">RED (code) appendices</a>, mostly Fortran and MATLAB</li>
+</ul>
+
+<h2>Fortran</h2>
+<h3 class="text-muted">Compilers and IDEs</h3>
+<ul>
+<li><a href="https://software.intel.com/content/www/us/en/develop/articles/qualify-for-free-software.html#student">Intel Parallel Studio XE</a> is available to students and some educators for free (Linux, Mac, Windows)</li>
+<li><a href="https://www.pgroup.com/products/community.htm">PGI Community Edition</a> from Nvidia is freely available, with GPGPU support via CUDA and OpenACC (Linux, Mac, Windows)</li>
+<li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux</a> for Windows 10 allows you to install gfortran, MPI, and other open source libraries</li>
+<li><a href="http://simplyfortran.com/features/">SimplyFortran</a> is a commercial all-in-one option for gfortran on Windows</li>
+</ul>
+<h3 class="text-muted">Language and Libraries</h3>
+<ul>
+<li><a href="https://sites.google.com/site/greygordon/teaching">Grey Gordon</a> lecture notes</li>
+<li><a href="http://fortranwiki.org/fortran/show/HomePage">FortranWiki</a></li>
+<li><a href="https://www.manning.com/books/modern-fortran?a_aid=modernfortran&a_bid=2dc4d442">Modern Fortran: Building efficient parallel applications</a></li>
+<li><a href="https://github.com/llvm/llvm-project/blob/master/flang/documentation/FortranForCProgrammers.md">Fortran for C Programmers</a> from the LLVM project</li>
+<li><a href="https://www.wiwi.uni-augsburg.de/vwl/maussner/dge_buch/dge_book_2ed/downloads_2nd/">Code</a> for <a href="https://www.wiwi.uni-augsburg.de/vwl/maussner/dge_buch/dge_book_2ed/">Dynamic General Equilibrium Modelling
+by Burkhard Heer and Alfred Mau&szlig;ner</a></li>
+<li><a href="https://github.com/jacobwilliams/bspline-fortran">b-splines</a> for interpolation in 1-6D</li>
+<li><a href="http://www.netlib.org/minpack/">MINPACK</a> for solutions to system of nonlinear equations</li>
+<li><a href="https://nlopt.readthedocs.io/en/latest/NLopt_Fortran_Reference/">NLopt</a> for constrained maximization with local or global methods, with and without derivatives</li>
+</ul>
+
+<h2>MATLAB</h2>
+<ul>
+<li><a href="https://github.com/gabrielgggg/MATLABGPU">My GPU code examples</a>: the income fluctuation problem and a sovereign default model</li>
+<li><a href="https://www.dynare.org/">Dynare</a> for local methods, deterministic/perfect foresight, filtering and more</li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304393214001238?via%3Dihub">OccBin</a> for local methods with occasionally binding constraints</li>
+<li><a href="https://github.com/jmaih/RISE_toolbox">RISE Toolbox</a> for solution and estimation of Markov Switching Rational Expectations</li>
+<li><a href="https://lmaliar.ws.gc.cuny.edu/codes/">Lilia Maliar</a> publications and code appendices (incl applications of machine learning)</li>
+<li><a href="https://robertdkirkby.github.io/IntroToChebyshevSmolyak.html">Chebyshev and Smolyak approxmation</a> by Robert Kirkby</li>
+<li><a href="http://www.chebfun.org/about/">Chebfun</a> for Chebyshev interpolation and approximation</li>
+</ul>
+
+<h2>C++</h2>
+<ul>
+<li><a href="https://en.cppreference.com/w/">C++ Wiki</a> and language reference</li>
+<li><a href="https://www.boost.org/doc/libs/1_73_0/libs/multi_array/doc/index.html">Boost Multi-Array</a> for multi-dimensional containers</li>
+<li><a href="http://arma.sourceforge.net/">Armadillo</a> templating library for vectors, matrices and higher dimension arrays</li>
+<li>Solvers and maximization: <a href="https://nlopt.readthedocs.io/en/latest/">NLopt</a>, <a href="http://dlib.net/">dlib</a>, <a href="http://ceres-solver.org/">Ceres Solver</a></li>
+<li><a href="https://www.geometrictools.com/Source/Interpolation.html">Akima splines</a> for mitigating oscillations of interpolation</li>
+<li><a href="https://solarianprogrammer.com/2012/05/11/mixed-language-programming-cpp-11-fortran-2008/">Guide on mixing C++11 and Fortran 2008</a></li>
+<li><a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> for consistent code formatting and style</li>
+</ul>
+
+<h2>LaTeX</h2>
+<ul>
+<li><a href=""></a> </li>
+<li><a href=""></a> </li>
+<li><a href=""></a> </li>
+<li><a href=""></a> </li>
+<li><a href=""></a> </li>
+</ul>
+
+
+<p class="float-right"><a href="./index.html">Back to my website</a></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
