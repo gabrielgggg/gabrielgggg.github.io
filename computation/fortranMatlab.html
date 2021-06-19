@@ -40,7 +40,7 @@ having the option to load the data in MATLAB (or similarly in any other "high le
 
 <p>Eventually you will want to save your results, here the <code>v0</code> array, for example:</p>
 
-<pre><code class="language-fortran">OPEN(NEWUNIT=iunit, FILE=outDir // "V.bin", FORM="unformatted", ACCESS="stream", STATUS="unknown")
+<pre><code class="language-fortran">OPEN(NEWUNIT=iunit, FILE=outDir // "v.bin", FORM="unformatted", ACCESS="stream", STATUS="unknown")
 WRITE (iunit) v0
 CLOSE(iunit)
 </code></pre>
