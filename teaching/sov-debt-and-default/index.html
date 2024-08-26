@@ -21,9 +21,8 @@ margin-bottom: 0.5em !important;
 <h1>Sovereign Default Reading List<br>
 <small class="text-muted">Compiled by Gabriel Mihalache</small></h1>
 
-<p>This is a reading list I compiled in January 2020 for my second year graduate class, ECO 613
-Computational Macroeconomics. The focus is on "quantitative-theoretic" models and relevant data
-work. Suggestions and edits are welcome! <em>Lightly updated February 2021.</em>
+<p>This is a reading list I first compiled in January 2020, for my second year graduate class at Stony Brook University, ECO 613 Computational Macroeconomics. The focus is on "quantitative-theoretic" models and relevant data
+work. Suggestions and edits are welcome! <em>Last updated August 2024.</em>
 <mark><a href="../../">Back to my website.</a></mark></p>
 
 <div class="row">
@@ -37,213 +36,268 @@ work. Suggestions and edits are welcome! <em>Lightly updated February 2021.</em>
 <li><a href="#recovery">Recovery, Renegotiation, and Haircuts</a></li>
 <li><a href="#monetary">Monetary Models</a></li>
 <li><a href="#lenders">Lenders, Global Factors</a></li>
-<li><a href="#secondary">Secondary Markets</a></li>
+<li><a href="#primary">Primary and Secondary Markets</a></li>
+<li><a href="#passthru">Sovereign Risk Pass-through and the "Doom Loop"</a></li>
 </ul>
 </div>
 <div class="col">
 <ul>
-<li><a href="#passthru">Sovereign Risk Pass-through and the "Doom Loop"</a></li>
 <li><a href="#polecon">Political Economy</a></li>
 <li><a href="#fiscal">Fiscal Policy</a></li>
 <li><a href="#domestic">Domestic Heterogeneity</a></li>
-<li><a href="#contracting">Optimal Contracting Approaches</a></li>
+<li><a href="#optimal">Optimal Contracting Approaches</a></li>
 <li><a href="#computation">Computation</a></li>
-<li><a href="#optimalclosed">Optimal Maturity in the Closed Economy</a></li>
-<li><a href="#conttime">Continuous Time Methods</a></li>
+<li><a href="#closed">Optimal Maturity in the Closed Economy</a></li>
+<li><a href="#continuous">Continuous Time Methods</a></li>
+<li><a href="#learning">Learning, Reputation, and Ambiguity</a></li>
+<li><a href="#legal">Legal and Contractual Aspects</a></li>
 </ul>
 </div>
 </div>
 
 <h2 id="benchmark">Benchmark Models and Theory</h2>
 <ul>
-<li>Eaton, J., &amp; Gersovitz, M. (1981). <em>Debt with Potential Repudiation: Theoretical and Empirical Analysis</em>. The Review of Economic Studies, 48(2), 289-309. Retrieved from <a href="http://www.jstor.org/stable/2296886">www.jstor.org/stable/2296886</a></li>
-<li>Cole, H., &amp; Kehoe, T. (2000). <em>Self-Fulfilling Debt Crises</em>. The Review of Economic Studies, 67(1), 91-116. Retrieved from <a href="http://www.jstor.org/stable/2567030">www.jstor.org/stable/2567030</a></li>
-<li>Aguiar, Mark &amp; Gopinath, Gita, 2006. "<em>Defaultable debt, interest rates and the current account</em>," Journal of International Economics, Elsevier, vol. 69(1), pages 64-83, June. <a href="https://doi.org/10.1016/j.jinteco.2005.05.005">https://doi.org/10.1016/j.jinteco.2005.05.005</a></li>
-<li>Arellano, Cristina. 2008. "<em>Default Risk and Income Fluctuations in Emerging Economies</em>." American Economic Review, 98 (3): 690-712. DOI: 10.1257/aer.98.3.690</li>
-<li>Chatterjee, Satyajit, and Burcu Eyigungor. 2012. "<em>Maturity, Indebtedness, and Default Risk</em>." American Economic Review, 102 (6): 2674-99. DOI: 10.1257/aer.102.6.2674</li>
-<li>Aguiar, M. &amp; Chatterjee, S. &amp; Cole, H. &amp; Stangebye, Z., 2016. "<em>Quantitative Models of Sovereign Debt Crises</em>," Handbook of Macroeconomics, in: J. B. Taylor &amp; Harald Uhlig (ed.), Handbook of Macroeconomics, edition 1, volume 2, chapter 21, pages 1697-1755, Elsevier.</li>
-<li>Auclert, Adrien &amp; Rognlie, Matthew, 2016. "<em>Unique equilibrium in the Eaton–Gersovitz model of sovereign debt</em>," Journal of Monetary Economics, Elsevier, vol. 84(C), pages 134-146. <a href="https://doi.org/10.1016/j.jmoneco.2016.10.013">https://doi.org/10.1016/j.jmoneco.2016.10.013</a></li>
-<li>Mark Aguiar, Manuel Amador, <em>A contraction for sovereign debt models</em>, Journal of Economic Theory, Volume 183, 2019, Pages 842-875, ISSN 0022-0531, <a href="https://doi.org/10.1016/j.jet.2019.08.005">https://doi.org/10.1016/j.jet.2019.08.005</a></li>
-<li>Lorenzoni, Guido, and Iván Werning. 2019. "<em>Slow Moving Debt Crises</em>." American Economic Review, 109 (9): 3229-63. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20141766">https://www.aeaweb.org/articles?id=10.1257/aer.20141766"</a></li>
-<li>Alex Pienkowski, Kenneth Rogoff, S. Ali Abbas. 2019. "<em>Sovereign Debt: A Guide for Economists and Practitioners</em>." OUP <a href="https://www.google.com/books/edition/Sovereign_Debt/3uNixgEACAAJ?hl=en">https://www.google.com/books/edition/Sovereign_Debt/3uNixgEACAAJ?hl=en</a></li>
+<li>Eaton, J., &amp; Gersovitz, M. (1981). Debt with Potential Repudiation: Theoretical and Empirical Analysis. <em>The Review of Economic Studies</em>, 48(2), 289. <a href="https://doi.org/10.2307/2296886">DOI</a></li>
+<li>Cole, H. L., &amp; Kehoe, T. (2000). Self-Fulfilling Debt Crises. <em>Review of Economic Studies</em>, 67(1), 91–116. <a href="https://doi.org/10.1111/1467-937x.00123">DOI</a></li>
+<li>Aguiar, M., &amp; Gopinath, G. (2006). , interest rates and the current account. <em>Journal of International Economics</em>, 69(1), 64–83. <a href="https://doi.org/10.1016/j.jinteco.2005.05.005">DOI</a></li>
+<li>Arellano, C. (2008). Default Risk and Income Fluctuations in Emerging Economies. <em>American Economic Review</em>, 98(3), 690–712. <a href="https://doi.org/10.1257/aer.98.3.690">DOI</a></li>
+<li>Chatterjee, S., &amp; Eyigungor, B. (2012). , Indebtedness, and Default Risk. <em>American Economic Review</em>, 102(6), 2674–2699. <a href="https://doi.org/10.1257/aer.102.6.2674">DOI</a></li>
+<li>Aguiar, M., Chatterjee, S., Cole, H., &amp; Stangebye, Z. (2016). Quantitative Models of Sovereign Debt Crises. <em>Handbook of Macroeconomics</em>, 1697–1755. <a href="https://doi.org/10.1016/bs.hesmac.2016.04.005">DOI</a></li>
+<li>Auclert, A., &amp; Rognlie, M. (2016). Unique equilibrium in the Eaton–Gersovitz model of sovereign debt. <em>Journal of Monetary Economics</em>, 84, 134–146. <a href="https://doi.org/10.1016/j.jmoneco.2016.10.013">DOI</a></li>
+<li>Aguiar, M., &amp; Amador, M. (2019). A contraction for sovereign debt models. <em>Journal of Economic Theory</em>, 183, 842–875. <a href="https://doi.org/10.1016/j.jet.2019.08.005">DOI</a></li>
+<li>Lorenzoni, G., &amp; Werning, I. (2019). Slow Moving Debt Crises. <em>American Economic Review</em>, 109(9), 3229–3263. <a href="https://doi.org/10.1257/aer.20141766">DOI</a></li>
+<li>Abbas, S. A., Pienkowski, A., &amp; Rogoff, K. (Eds.). (2019). Sovereign Debt. <a href="https://doi.org/10.1093/oso/9780198850823.001.0001">DOI</a></li>
+<li>Paluszynski, R., &amp; Stefanidis, G. (2023). Borrowing into debt crises. <em>Quantitative Economics</em>, 14(1), 277–308. <a href="https://doi.org/10.3982/qe1797">DOI</a></li>
+<li>Xavier Mateos-Planas &amp; Sean McCrary &amp; José-Víctor Ríos-Rull &amp; Adrien Wicht (2023). <em> The Generalized Euler Equation and the Bankruptcy-Sovereign Default Problem</em>. Working paper.</li>
 </ul>
 
 <h2 id="evidence">Evidence</h2>
 <ul>
-<li>Neumeyer, Pablo A. &amp; Perri, Fabrizio, 2005. "<em>Business cycles in emerging economies: the role of interest rates</em>," Journal of Monetary Economics, Elsevier, vol. 52(2), pages 345-380, March. <a href="https://doi.org/10.1016/j.jmoneco.2004.04.011">https://doi.org/10.1016/j.jmoneco.2004.04.011</a></li>
-<li>Gelos, R. Gaston &amp; Sahay, Ratna &amp; Sandleris, Guido, 2011. "<em>Sovereign borrowing by developing countries: What determines market access?</em>," Journal of International Economics, Elsevier, vol. 83(2), pages 243-254, March. <a href="https://doi.org/10.1016/j.jinteco.2010.11.007">https://doi.org/10.1016/j.jinteco.2010.11.007</a></li>
-<li>Michael Tomz &amp; Mark L.J. Wright, 2013. "<em>Empirical Research on Sovereign Debt and Default,</em>" Annual Review of Economics, Annual Reviews, vol. 5(1), pages 247-272, May. <a href="https://doi.org/10.1146/annurev-economics-061109-080443">https://doi.org/10.1146/annurev-economics-061109-080443</a></li>
-<li>Cruces, J., &amp; Trebesch, C. (2013). <em>Sovereign Defaults: The Price of Haircuts</em>. American Economic Journal: Macroeconomics, 5(3), 85-117. Retrieved from <a href="http://www.jstor.org/stable/43189553">www.jstor.org/stable/43189553</a></li>
-<li>Laura Alfaro &amp; Sebnem Kalemli-Ozcan &amp; Vadym Volosovych, 2014. "<em>Sovereigns, Upstream Capital Flows, And Global Imbalances,</em>" Journal of the European Economic Association, European Economic Association, vol. 12(5), pages 1240-1284, October. <a href="http://hdl.handle.net/10.1111/jeea.12106">http://hdl.handle.net/10.1111/jeea.12106</a> </li>
-<li>Aguiar, M. &amp; Chatterjee, S. &amp; Cole, H. &amp; Stangebye, Z., 2016. "<em>Quantitative Models of Sovereign Debt Crises,</em>" Handbook of Macroeconomics, in: J. B. Taylor &amp; Harald Uhlig (ed.), Handbook of Macroeconomics, edition 1, volume 2, chapter 21, pages 1697-1755, Elsevier.</li>
-<li>Carmen M. Reinhart &amp; Christoph Trebesch, 2016. "<em>Sovereign Debt Relief and Its Aftermath</em>," Journal of the European Economic Association, European Economic Association, vol. 14(1), pages 215-251. <a href="http://hdl.handle.net/10.1111/jeea.12166">http://hdl.handle.net/10.1111/jeea.12166</a></li>
-<li>Wenxin Du &amp; Jesse Schreger, 2016. "<em>Local Currency Sovereign Risk,</em>" Journal of Finance, American Finance Association, vol. 71(3), pages 1027-1070, June. <a href="http://hdl.handle.net/10.1111/jofi.2016.71.issue-3">http://hdl.handle.net/10.1111/jofi.2016.71.issue-3</a></li>
-<li>Chamon, Marcos &amp; Schumacher, Julian &amp; Trebesch, Christoph, 2018. "<em>Foreign-law bonds: Can they reduce sovereign borrowing costs?,</em>" Journal of International Economics, Elsevier, vol. 114(C), pages 164-179. <a href="https://doi.org/10.1016/j.jinteco.2018.06.004">https://doi.org/10.1016/j.jinteco.2018.06.004</a> </li>
-<li>Gong Cheng &amp; Javier Diaz-Cassou &amp; Aitor Erce, 2019. "<em>The macroeconomic effects of official debt restructuring: evidence from the Paris Club,</em>" Oxford Economic Papers, Oxford University Press, vol. 71(2), pages 344-363. <a href="http://hdl.handle.net/10.1093/oep/gpy032">http://hdl.handle.net/10.1093/oep/gpy032</a></li>
-<li>Josefin Meyer &amp; Carmen M. Reinhart &amp; Christoph Trebesch, 2019. "<em>Sovereign Bonds since Waterloo,</em>" working paper</li>
-<li>Matthias Schlegl &amp; Christoph Trebesch &amp; Mark L.J. Wright, 2019. "<em>The Seniority Structure of Sovereign Debt,</em>" working paper</li>
-<li>Kris James Mitchener &amp; Christoph Trebesch, 2021. "<em>Sovereign Debt in the 21st Century: Looking Backward, Looking Forward,</em>" working paper</li>
+<li>Neumeyer, P. A., &amp; Perri, F. (2005). Business cycles in emerging economies: the role of interest rates. <em>Journal of Monetary Economics</em>, 52(2), 345–380. <a href="https://doi.org/10.1016/j.jmoneco.2004.04.011">DOI</a></li>
+<li>Gelos, R. G., Sahay, R., &amp; Sandleris, G. (2011). Sovereign borrowing by developing countries: What determines market access? 
+Journal of International Economics, 83(2), 243–254. <a href="https://doi.org/10.1016/j.jinteco.2010.11.007">DOI</a></li>
+<li>Tomz, M., &amp; Wright, M. L. J. (2013). Empirical Research on Sovereign Debt and Default. <em>Annual Review of Economics</em>, 5(1), 247–272. <a href="https://doi.org/10.1146/annurev-economics-061109-080443">DOI</a></li>
+<li>Cruces, J. J., &amp; Trebesch, C. (2013). Sovereign Defaults: The Price of Haircuts. <em>American Economic Journal: Macroeconomics</em>, 5(3), 
+85–117. <a href="https://doi.org/10.1257/mac.5.3.85">DOI</a></li>
+<li>Alfaro, L., Kalemli-Ozcan, S., &amp; Volosovych, V. (2014). Sovereigns, Upstream Capital Flows, and Global Imbalances.<em>Journal of the European Economic Association</em>, 12(5), 1240–1284. <a href="https://doi.org/10.1111/jeea.12106">DOI</a></li>
+<li>Reinhart, C. M., &amp; Trebesch, C. (2016). Sovereign Debt Relief and its Aftermath. <em>Journal of the European Economic Association</em>, 14(1), 215–251. <a href="https://doi.org/10.1111/jeea.12166">DOI</a></li>
+<li>Aguiar, M., Chatterjee, S., Cole, H., &amp; Stangebye, Z. (2016). Quantitative Models of Sovereign Debt Crises. <em>Handbook of Macroeconomics</em>, 1697–1755. <a href="https://doi.org/10.1016/bs.hesmac.2016.04.005">DOI</a></li>
+<li>Du, W., &amp; Schreger, J. (2016). Local Currency Sovereign Risk. <em>The Journal of Finance</em>, 71(3), 1027–1070. <a href="https://doi.org/10.1111/jofi.12389">DOI</a></li>
+<li>Chamon, M., Schumacher, J., &amp; Trebesch, C. (2018). Foreign-law bonds: Can they reduce sovereign borrowing costs? <em>Journal of 
+International Economics</em>, 114, 164–179. <a href="https://doi.org/10.1016/j.jinteco.2018.06.004">DOI</a></li>
+<li>Cheng, G., Diaz-Cassou, J., &amp; Erce, A. (2018). The macroeconomic effects of official debt restructuring: evidence from the Paris Club. <em>Oxford Economic Papers</em>, 71(2), 344–363. <a href="https://doi.org/10.1093/oep/gpy032">DOI</a></li>
+<li>Josefin Meyer &amp; Carmen M. Reinhart &amp; Christoph Trebesch (2019). <em> Sovereign Bonds since Waterloo</em>. Working paper.</li>
+<li>Meyer, J., Reinhart, C. M., &amp; Trebesch, C. (2022). Sovereign Bonds Since Waterloo. <em>The Quarterly Journal of Economics</em>, 137(3), 1615–1680. <a href="https://doi.org/10.1093/qje/qjac007">DOI</a></li>
+<li>Timothy J. Kehoe  &amp; Juan Pablo Nicolini (2022). <em>A Monetary and Fiscal History of Latin America, 1960–2017</em>. <a href="https://manifold.bfi.uchicago.edu/projects/monetary-fiscal-history-latin-america-1960-2017">Website</a></li>
+<li>Mitchener, K. J., &amp; Trebesch, C. (2023). Sovereign Debt in the Twenty-first Century. <em>Journal of Economic Literature</em>, 61(2), 565–623. <a href="https://doi.org/10.1257/jel.20211362">DOI</a></li>
+<li>Farah-Yacoub, J., von Luckner, C. M. G., &amp; Reinhart, C. (2024). <em>The Social Costs of Sovereign Default.</em> Working paper.</li>
+<li>von Luckner, C. M. G., Meyer, J., Reinhart, C., &amp; Trebesch, C. (2024). <em>Sovereign Haircuts: 200 Years of Creditor Losses.</em> Working paper.</li>
 </ul>
 
 <h2 id="invest">Investment and Production</h2>
 <ul>
-<li>Enrique G. Mendoza &amp; Vivian Z. Yue, 2012. "<em>A General Equilibrium Model of Sovereign Default and Business Cycles,</em>" The Quarterly Journal of Economics, Oxford University Press, vol. 127(2), pages 889-946. <a href="http://hdl.handle.net/10.1093/qje/qjs009">http://hdl.handle.net/10.1093/qje/qjs009</a> </li>
-<li>Park, JungJae, 2017. "<em>Sovereign default and capital accumulation,</em>" Journal of International Economics, Elsevier, vol. 106(C), pages 119-133. <a href="https://doi.org/10.1016/j.jinteco.2017.02.004">https://doi.org/10.1016/j.jinteco.2017.02.004</a> </li>
-<li>Grey Gordon &amp; Pablo Guerron-Quintana, 2018. "<em>Dynamics of Investment, Debt, and Default,</em>" Review of Economic Dynamics, Elsevier for the Society for Economic Dynamics, vol. 28, pages 71-95, April. <a href="https://doi.org/10.1016/j.red.2017.07.007">https://doi.org/10.1016/j.red.2017.07.007</a></li>
-<li>Arellano, Cristina &amp; Bai, Yan &amp; Mihalache, Gabriel, 2018. "<em>Default risk, sectoral reallocation, and persistent recessions,</em>" Journal of International Economics, Elsevier, vol. 112(C), pages 182-199. <a href="https://doi.org/10.1016/j.jinteco.2018.01.004">https://doi.org/10.1016/j.jinteco.2018.01.004</a></li>
-<li>George Alessandria &amp; Minjie Deng &amp; Yan Bai, 2020. "<em>Sovereign Default Risk and Migration,</em>" Journal of Monetary Economics, Elsevier, <a href="https://doi.org/10.1016/j.jmoneco.2020.04.007">https://doi.org/10.1016/j.jmoneco.2020.04.007</a></li>
-<li>Zhigang Feng &amp; Manuel Santos, 2019, "<em>Sovereign Default, TFP, Fiscal and Financial Frictions,</em>" working paper</li>
+<li>Mendoza, E. G., &amp; Yue, V. Z. (2012). A General Equilibrium Model of Sovereign Default and Business Cycles. <em>The Quarterly Journal of Economics</em>, 127(2), 889–946. <a href="https://doi.org/10.1093/qje/qjs009">DOI</a></li>
+<li>Park, J. (2017). Sovereign default and capital accumulation. <em>Journal of International Economics</em>, 106, 119–133. <a href="https://doi.org/10.1016/j.jinteco.2017.02.004">DOI</a></li>
+<li>Gordon, G., &amp; Guerron-Quintana, P. A. (2018). Dynamics of investment, debt, and default. <em>Review of Economic Dynamics</em>, 28, 71–95. <a href="https://doi.org/10.1016/j.red.2017.07.007">DOI</a></li>
+<li>Arellano, C., Bai, Y., &amp; Mihalache, G. (2018). Default risk, sectoral reallocation, and persistent recessions. <em>Journal of International Economics</em>, 112, 182–199. <a href="https://doi.org/10.1016/j.jinteco.2018.01.004">DOI</a></li>
+<li>Alessandria, G., Bai, Y., &amp; Deng, M. (2020). Migration and sovereign default risk. <em>Journal of Monetary Economics</em>, 113, 1–22. <a href="https://doi.org/10.1016/j.jmoneco.2020.04.007">DOI</a></li>
+<li>Zhigang Feng &amp; Manuel Santos (2023). <em>Markov Perfect Equilibrium in Economies with Sovereign Default and Distortionary Taxation</em>. Working paper.</li>
+<li>Esquivel, C. (2024). Underinvestment and capital misallocation under sovereign risk. <em>Journal of International Economics</em>, 151, 103973. <a href="https://doi.org/10.1016/j.jinteco.2024.103973">DOI</a></li>
+<li>Carlos Esquivel (2024). <em> Sovereign Risk and Dutch Disease</em>. Working paper.</li>
+<li>Carlos Esquivel (2024). <em> The Sovereign Default Risk of Giant Oil Discoveries</em>. Working paper.</li>
 </ul>
 
 <h2 id="maturity">Long-Term Debt, Reserves, and Maturity Choice</h2>
 <ul>
-<li>Hatchondo, Juan Carlos &amp; Martinez, Leonardo, 2009. "<em>Long-duration bonds and sovereign defaults,</em>" Journal of International Economics, Elsevier, vol. 79(1), pages 117-125, September. <a href="https://doi.org/10.1016/j.jinteco.2009.07.002">https://doi.org/10.1016/j.jinteco.2009.07.002</a></li>
-<li>Alfaro, Laura &amp; Kanczuk, Fabio, 2009. "<em>Optimal reserve management and sovereign debt,</em>" Journal of International Economics, Elsevier, vol. 77(1), pages 23-36, February. <a href="https://doi.org/10.1016/j.jinteco.2008.09.005">https://doi.org/10.1016/j.jinteco.2008.09.005</a></li>
-<li>Chatterjee, Satyajit, and Burcu Eyigungor. 2012. "<em>Maturity, Indebtedness, and Default Risk.</em>" American Economic Review, 102 (6): 2674-99. DOI: 10.1257/aer.102.6.2674</li>
-<li>Arellano, C., &amp; Ramanarayanan, A. (2012). <em>Default and the Maturity Structure in Sovereign Bonds</em>. Journal of Political Economy, 120(2), 187-232. doi:10.1086/666589</li>
-<li>Tavares, Tiago, 2015. "<em>The Role of International Reserves in Sovereign Debt Restructuring under Fiscal Adjustment,</em>" working paper</li>
-<li>Juan Carlos Hatchondo &amp; Leonardo Martinez &amp; César Sosa-Padilla, 2016. "<em>Debt Dilution and Sovereign Default Risk</em>," Journal of Political Economy, University of Chicago Press, vol. 124(5), pages 1383-1422. <a href="http://dx.doi.org/10.1086/688081">http://dx.doi.org/10.1086/688081</a></li>
-<li>Javier Bianchi &amp; Juan Carlos Hatchondo &amp; Leonardo Martinez, 2018. "<em>International Reserves and Rollover Risk</em>," American Economic Review, American Economic Association, vol. 108(9), pages 2629-2670, September. <a href="https://www.aeaweb.org/doi/10.1257/aer.20140443">https://www.aeaweb.org/doi/10.1257/aer.20140443</a> </li>
-<li>Sánchez, Juan M. &amp; Sapriza, Horacio &amp; Yurdagul, Emircan, 2018. "<em>Sovereign default and maturity choice,</em>" Journal of Monetary Economics, Elsevier, vol. 95(C), pages 72-85. <a href="https://doi.org/10.1016/j.jmoneco.2018.01.001">https://doi.org/10.1016/j.jmoneco.2018.01.001</a> </li>
-<li>Mark Aguiar &amp; Manuel Amador &amp; Hugo Hopenhayn &amp; Iván Werning, 2019. "<em>Take the Short Route: Equilibrium Default and Debt Maturity,</em>" Econometrica, Econometric Society, vol. 87(2), pages 423-462, March. <a href="https://doi.org/10.3982/ECTA14806">https://doi.org/10.3982/ECTA14806</a> </li>
-<li>Bocola, Luigi, and Alessandro Dovis. 2019. "<em>Self-Fulfilling Debt Crises: A Quantitative Analysis.</em>" American Economic Review, 109 (12): 4343-77. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20161471">https://www.aeaweb.org/articles?id=10.1257/aer.20161471</a></li>
-<li>Gabriel Mihalache, 2020. "<em>Sovereign Default Resolution Through Maturity Extension,</em>" Journal of International Economics, 125C. <a href="https://doi.org/10.1016/j.jinteco.2020.103326">https://doi.org/10.1016/j.jinteco.2020.103326</a></li>
+<li>Hatchondo, J. C., &amp; Martinez, L. (2009). Long-duration bonds and sovereign defaults. <em>Journal of International Economics</em>, 79(1), 117–125. <a href="https://doi.org/10.1016/j.jinteco.2009.07.002">DOI</a></li>
+<li>Alfaro, L., &amp; Kanczuk, F. (2009). Optimal reserve management and sovereign debt. <em>Journal of International Economics</em>, 77(1), 23–36. <a href="https://doi.org/10.1016/j.jinteco.2008.09.005">DOI</a></li>
+<li>Chatterjee, S., &amp; Eyigungor, B. (2012). Maturity, Indebtedness, and Default Risk. <em>American Economic Review</em>, 102(6), 2674–2699. <a href="https://doi.org/10.1257/aer.102.6.2674">DOI</a></li>
+<li>Arellano, C., &amp; Ramanarayanan, A. (2012). Default and the Maturity Structure in Sovereign Bonds. <em>Journal of Political Economy</em>, 120(2), 187–232. <a href="https://doi.org/10.1086/666589">DOI</a></li>
+<li>Tiago Tavares (2015). <em> The Role of International Reserves in Sovereign Debt Restructuring under Fiscal Adjustment</em>. Working paper.</li>
+<li>Hatchondo, J. C., Martinez, L., &amp; Sosa-Padilla, C. (2016). Debt Dilution and Sovereign Default Risk. <em>Journal of Political Economy</em>, 124(5), 1383–1422. <a href="https://doi.org/10.1086/688081">DOI</a></li>
+<li>Bianchi, J., Hatchondo, J. C., &amp; Martinez, L. (2018). International Reserves and Rollover Risk. <em>American Economic Review</em>, 108(9), 2629–2670. <a href="https://doi.org/10.1257/aer.20140443">DOI</a></li>
+<li>Sánchez, J. M., Sapriza, H., &amp; Yurdagul, E. (2018). Sovereign default and maturity choice. <em>Journal of Monetary Economics</em>, 95, 72–85. <a href="https://doi.org/10.1016/j.jmoneco.2018.01.001">DOI</a></li>
+<li>Bocola, L., &amp; Dovis, A. (2019). Self-Fulfilling Debt Crises: A Quantitative Analysis. <em>American Economic Review</em>, 109(12), 4343–4377. <a href="https://doi.org/10.1257/aer.20161471">DOI</a></li>
+<li>Aguiar, M., Amador, M., Hopenhayn, H., &amp; Werning, I. (2019). Take the Short Route: Equilibrium Default and Debt Maturity. <em>Econometrica</em>, 87(2), 423–462. <a href="https://doi.org/10.3982/ecta14806">DOI</a></li>
+<li>Mihalache, G. (2020). Sovereign default resolution through maturity extension. <em>Journal of International Economics</em>, 125, 103326. <a href="https://doi.org/10.1016/j.jinteco.2020.103326">DOI</a></li>
+<li>Radoslaw  Paluszynski (2022). <em> The Ultralong Sovereign Default Risk</em>. Working paper.</li>
+<li>Bianchi, J., &amp; Sosa-Padilla, C. (2023). Reserve Accumulation, Macroeconomic Stabilization, and Sovereign Risk. <em>Review of Economic Studies</em>, 91(4), 2053–2103. <a href="https://doi.org/10.1093/restud/rdad075">DOI</a></li>
+<li>Sosa-Padilla, C., &amp; Sturzenegger, F. (2023). Does it matter how central banks accumulate reserves? Evidence from sovereign spreads. <em>Journal of International Economics</em>, 140, 103711. <a href="https://doi.org/10.1016/j.jinteco.2022.103711">DOI</a></li>
+<li>Barbosa-Alves, M., Bianchi, J., &amp; Sosa-Padilla, C. (2024). <em>International Reserve Management under Rollover Crises</em>. Working paper.</li>
 </ul>
 
 <h2 id="selffill">Self-fulfilling Crises and Multiplicity</h2>
 <ul>
-<li>Calvo, G. (1988). <em>Servicing the Public Debt: The Role of Expectations.</em> The American Economic Review, 78(4), 647-661. Retrieved from <a href="http://www.jstor.org/stable/1811165">www.jstor.org/stable/1811165</a> </li>
-<li>Cole, H., &amp; Kehoe, T. (2000). <em>Self-Fulfilling Debt Crises.</em> The Review of Economic Studies, 67(1), 91-116. Retrieved from <a href="http://www.jstor.org/stable/2567030">www.jstor.org/stable/2567030</a></li>
-<li>Conesa, J.C., Kehoe, T.J. <em>Gambling for redemption and self-fulfilling debt crises.</em> Econ Theory 64, 707–740 (2017) doi:10.1007/s00199-017-1085-5 <a href="https://doi.org/10.1007/s00199-017-1085-5">https://doi.org/10.1007/s00199-017-1085-5</a></li>
-<li>Mark Aguiar &amp; Satyajit Chatterjee &amp; Harold Cole &amp; Zachary Stangebye, 2017, "<em>Self-Fulfilling Debt Crises, Revisited: The Art of the Desperate Deal,</em>" working paper</li>
-<li>Bocola, Luigi, and Alessandro Dovis. 2019. "<em>Self-Fulfilling Debt Crises: A Quantitative Analysis.</em>" American Economic Review, 109 (12): 4343-77. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20161471">https://www.aeaweb.org/articles?id=10.1257/aer.20161471</a></li>
-<li>Lorenzoni, Guido, and Iván Werning. 2019. "<em>Slow Moving Debt Crises</em>." American Economic Review, 109 (9): 3229-63. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20141766">https://www.aeaweb.org/articles?id=10.1257/aer.20141766"</a></li>
-<li>Mark Aguiar &amp; Manuel Amador, 2019. "<em>Self-Fulfilling Debt Dilution: Maturity and Multiplicity in Debt Models,</em>" working paper</li>
-<li>Zachary R. Stangebye, 2019, "<em>Beliefs and Long-Maturity Sovereign Debt,</em>" working paper</li>
+<li>Calvo, Guillermo A. (1988). Servicing the Public Debt: The Role of Expectations. <em>American Economic Review</em>. <a href="https://www.jstor.org/stable/1811165">DOI</a></li>
+<li>Cole, H. L., &amp; Kehoe, T. (2000). Self-Fulfilling Debt Crises. <em>Review of Economic Studies</em>, 67(1), 91–116. <a href="https://doi.org/10.1111/1467-937x.00123">DOI</a></li>
+<li>Conesa, J. C., &amp; Kehoe, T. J. (2017). Gambling for redemption and self-fulfilling debt crises. <em>Economic Theory</em>, 64(4), 707–740. <a href="https://doi.org/10.1007/s00199-017-1085-5">DOI</a></li>
+<li>Ayres, J., Navarro, G., Nicolini, J. P., &amp; Teles, P. (2018). Sovereign default: The role of expectations. <em>Journal of Economic Theory</em>, 175, 803–812. <a href="https://doi.org/10.1016/j.jet.2018.02.006">DOI</a></li>
+<li>Bocola, L., &amp; Dovis, A. (2019). Self-Fulfilling Debt Crises: A Quantitative Analysis. <em>American Economic Review</em>, 109(12), 4343–4377. <a href="https://doi.org/10.1257/aer.20161471">DOI</a></li>
+<li>Lorenzoni, G., &amp; Werning, I. (2019). Slow Moving Debt Crises. <em>American Economic Review</em>, 109(9), 3229–3263. <a href="https://doi.org/10.1257/aer.20141766">DOI</a></li>
+<li>Aguiar, M., &amp; Amador, M. (2020). Self-Fulfilling Debt Dilution: Maturity and Multiplicity in Debt Models. <em>American Economic Review</em>, 110(9), 2783–2818. <a href="https://doi.org/10.1257/aer.20180831">DOI</a></li>
+<li>Stangebye, Z. R. (2020). Beliefs and long-maturity sovereign debt. <em>Journal of International Economics</em>, 127, 103381. <a href="https://doi.org/10.1016/j.jinteco.2020.103381">DOI</a></li>
+<li>Bianchi, J., &amp; Mondragon, J. (2021). Monetary Independence and Rollover Crises. <em>The Quarterly Journal of Economics</em>, 137(1), 435–491. <a href="https://doi.org/10.1093/qje/qjab025">DOI</a></li>
+<li>Mark Aguiar &amp; Satyajit Chatterjee &amp; Harold Cole &amp; Zachary Stangebye (2022). Self-Fulfilling Debt Crises, Revisited. <em>Journal of Political Economy</em>. <a href="https://doi.org/10.1086/718934">DOI</a></li>
+<li>Barbosa-Alves, M., Bianchi, J., &amp; Sosa-Padilla, C. (2024). 
+International Reserve Management under Rollover Crises. Working Paper.</li>
+<li>Joao Ayres &amp; Gaston Navarro &amp; Juan Pablo Nicolini &amp; Pedro Teles (2024). <em> Self-Fulfilling Debt Crises with Long Stagnations</em>. Working paper.</li>
 </ul>
 
 <h2 id="recovery">Recovery, Renegotiation, and Haircuts</h2>
 <ul>
-<li>Yue, Vivian Z., 2010. "<em>Sovereign default and debt renegotiation,</em>" Journal of International Economics, Elsevier, vol. 80(2), pages 176-187, March. <a href="https://doi.org/10.1016/j.jinteco.2009.11.004">https://doi.org/10.1016/j.jinteco.2009.11.004</a> </li>
-<li>Rohan Pitchford &amp; Mark L. J. Wright, 2012. "<em>Holdouts in Sovereign Debt Restructuring: A Theory of Negotiation in a Weak Contractual Environment,</em>" Review of Economic Studies, Oxford University Press, vol. 79(2), pages 812-837. <a href="http://www.jstor.org/stable/23261351">www.jstor.org/stable/23261351</a></li>
-<li>Hatchondo, Juan Carlos &amp; Martinez, Leonardo &amp; Sosa Padilla, César, 2014. "<em>Voluntary sovereign debt exchanges,</em>" Journal of Monetary Economics, Elsevier, vol. 61(C), pages 32-50. <a href="https://doi.org/10.1016/j.jmoneco.2013.11.002">https://doi.org/10.1016/j.jmoneco.2013.11.002</a></li>
-<li>Cristina Arellano &amp; Yan Bai &amp; Sandra Lizarazo, 2017. "<em>Sovereign Risk Contagion,</em>" working paper</li>
-<li>Cristina Arellano &amp; Xavier Mateos-Planas &amp; Jose-Victor Rios-Rull, 2019. "<em>Partial Default,</em>" working paper</li>
-<li>Tamon Asonuma &amp; Hyungseok Joo, 2019. "<em>Sovereign Debt Restructurings: Delays in Renegotiations and Risk Averse Creditors,</em>" working paper</li>
-<li>Juan M. Sanchez &amp; Maximiliano Dvorkin &amp; Emircan Yurdagul &amp; Horacio Sapriza, 2019, "<em>Sovereign Debt Restructurings,</em>" working paper</li>
-<li>Xiaohan Wang, 2019, "<em>Renegotiation After Sovereign Default: Bygones No Longer,</em>" working paper</li>
-<li>Gabriel Mihalache, 2020. "<em>Sovereign Default Resolution Through Maturity Extension,</em>" Journal of International Economics, 125C. <a href="https://doi.org/10.1016/j.jinteco.2020.103326">https://doi.org/10.1016/j.jinteco.2020.103326</a></li>
-<li>Tamon Asonuma &amp; Dirk Niepelt &amp; Romain Ranciere, 2020, "<em>Sovereign Bond Prices, Haircuts and Maturity,</em>" working paper</li>
-<li>Juan C. Hatchondo &amp; Leonardo Martinez &amp; Cesar Sosa-Padilla, 2020. <em>"Sovereign Debt Standstills,"</em> working paper</li>
+<li>Yue, V. Z. (2010). Sovereign default and debt renegotiation. <em>Journal of International Economics</em>, 80(2), 176–187. <a href="https://doi.org/10.1016/j.jinteco.2009.11.004">DOI</a></li>
+<li>Pitchford, R., &amp; Wright, M. L. J. (2011). Holdouts in Sovereign Debt Restructuring: A Theory of Negotiation in a Weak Contractual 
+Environment. <em>The Review of Economic Studies</em>, 79(2), 812–837. <a href="https://doi.org/10.1093/restud/rdr038">DOI</a></li>
+<li>Hatchondo, J. C., Martinez, L., &amp; Sosa Padilla, C. (2014). Voluntary sovereign debt exchanges. <em>Journal of Monetary Economics</em>, 61, 32–50. <a href="https://doi.org/10.1016/j.jmoneco.2013.11.002">DOI</a></li>
+<li>Asonuma, T., &amp; Trebesch, C. (2016). Sovereign Debt Restructurings: Preemptive or Post-Default. <em>Journal of the European Economic Association</em>, 14(1), 175–214. <a href="https://doi.org/10.1111/jeea.12156">DOI</a></li>
+<li>Cristina Arellano &amp; Yan Bai &amp; Sandra Lizarazo (2017). <em> Sovereign Risk Contagion</em>. Working paper.</li>
+<li>Xiaohan Wang (2019). <em> Renegotiation After Sovereign Default: Bygones No Longer</em>. Working paper.</li>
+<li>Asonuma, T., &amp; Joo, H. (2020). Sovereign Debt Restructurings: Delays in Renegotiations and Risk Averse Creditors. <em>Journal of the European Economic Association</em>, 18(5), 2394–2440. <a href="https://doi.org/10.1093/jeea/jvz080">DOI</a></li>
+<li>Mihalache, G. (2020). Sovereign default resolution through maturity extension. <em>Journal of International Economics</em>, 125, 103326. <a href="https://doi.org/10.1016/j.jinteco.2020.103326">DOI</a></li>
+<li>Dvorkin, M., Sánchez, J. M., Sapriza, H., &amp; Yurdagul, E. (2021). Sovereign Debt Restructurings. <em>American Economic Journal: 
+Macroeconomics</em>, 13(2), 26–77. <a href="https://doi.org/10.1257/mac.20190220">DOI</a></li>
+<li>Arellano, C., Mateos-Planas, X., &amp; Ríos-Rull, J.-V. (2023). Partial Default. <em>Journal of Political Economy</em>, 131(6), 1385–1439. <a href="https://doi.org/10.1086/722934">DOI</a></li>
+<li>Asonuma, T., Niepelt, D., &amp; Ranciere, R. (2023). Sovereign bond prices, haircuts and maturity. <em>Journal of International Economics</em>, 140, 103689. <a href="https://doi.org/10.1016/j.jinteco.2022.103689">DOI</a></li>
+<li>Arellano, C., Bai, Y., &amp; Mihalache, G. (2023). Deadly Debt Crises: COVID-19 in Emerging Markets. <em>Review of Economic Studies</em>, 91(3), 1243–1290. <a href="https://doi.org/10.1093/restud/rdad058">DOI</a></li>
+<li>Juan C. Hatchondo &amp; Leonardo Martinez &amp; Cesar Sosa-Padilla (2023). <em> Sovereign Debt Standstills</em>. Working paper.</li>
 </ul>
 
 <h2 id="monetary">Monetary Models</h2>
 <ul>
-<li>Giancarlo Corsetti &amp; Luca Dedola, 2016. "<em>The Mystery Of The Printing Press: Monetary Policy And Self-Fulfilling Debt Crises,</em>" Journal of the European Economic Association, European Economic Association, vol. 14(6), pages 1329-1371, December. <a href="http://hdl.handle.net/10.1111/jeea.12184">http://hdl.handle.net/10.1111/jeea.12184</a></li>
-<li>Na, Seunghoon, Stephanie Schmitt-Grohé, Martín Uribe, and Vivian Yue. 2018. "<em>The Twin Ds: Optimal Default and Devaluation.</em>" American Economic Review, 108 (7): 1773-1819. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20141558">https://www.aeaweb.org/articles?id=10.1257/aer.20141558</a></li>
-<li>Fabrizio Perri &amp; Sewon Hur &amp; Illenin O. Kondo, 2018. "<em>Real Interest Rates, Inflation, and Default,</em>" working paper</li>
-<li>Bacchetta, Philippe &amp; Perazzi, Elena &amp; van Wincoop, Eric, 2018. "<em>Self-fulfilling debt crises: What can monetary policy do?,</em>" Journal of International Economics, Elsevier, vol. 110(C), pages 119-134. <a href="https://doi.org/10.1016/j.jinteco.2017.11.004">https://doi.org/10.1016/j.jinteco.2017.11.004</a></li>
-<li>Pablo Ottonello &amp; Diego J. Perez, 2019. "<em>The Currency Composition of Sovereign Debt,</em>" American Economic Journal: Macroeconomics, American Economic Association, vol. 11(3), pages 174-208, July. <a href="https://www.aeaweb.org/doi/10.1257/mac.20180019">https://www.aeaweb.org/doi/10.1257/mac.20180019</a> </li>
-<li>Jorge Mondragon &amp; Javier Bianchi, 2018. "<em>Monetary Independence and Rollover
-    Crises,</em>" working paper</li>
-<li>Galo Nu&ntilde;o &amp; Carlos Thomas, 2019. <em>"Monetary Policy and Sovereign Debt Sustainability,"</em> working paper </li>
-<li>Cristina Arellano &amp; Yan Bai &amp; Gabriel Mihalache, 2020. "<em>Monetary Policy and Sovereign Risk in Emerging Economies (NK-Default),</em>" working paper</li>
+<li>Corsetti, G., &amp; Dedola, L. (2016). The Mystery of the Printing Press: Monetary Policy and Self-Fulfilling Debt Crises. <em>Journal of the European Economic Association</em>, 14(6), 1329–1371. <a href="https://doi.org/10.1111/jeea.12184">DOI</a></li>
+<li>Na, S., Schmitt-Grohé, S., Uribe, M., &amp; Yue, V. (2018). The Twin Ds: Optimal Default and Devaluation. <em>American Economic Review</em>, 108(7), 1773–1819. <a href="https://doi.org/10.1257/aer.20141558">DOI</a></li>
+<li>Fabrizio Perri &amp; Sewon Hur &amp; Illenin O. Kondo (2018). <em> Real Interest Rates, Inflation, and Default</em>. Working paper.</li>
+<li>Bacchetta, P., Perazzi, E., &amp; van Wincoop, E. (2018). Self-fulfilling debt crises: What can monetary policy do? <em>Journal of 
+International Economics</em>, 110, 119–134. <a href="https://doi.org/10.1016/j.jinteco.2017.11.004">DOI</a></li>
+<li>Ottonello, P., &amp; Perez, D. J. (2019). The Currency Composition of Sovereign Debt. <em>American Economic Journal: Macroeconomics</em>, 11(3), 
+174–208. <a href="https://doi.org/10.1257/mac.20180019">DOI</a></li>
+<li>Bianchi, J., &amp; Mondragon, J. (2021). Monetary Independence and Rollover Crises. <em>The Quarterly Journal of Economics</em>, 137(1), 435–491. <a href="https://doi.org/10.1093/qje/qjab025">DOI</a></li>
+<li>Hurtado, S., Nuño, G., &amp; Thomas, C. (2022). Monetary Policy and Sovereign Debt Sustainability. <em>Journal of the European Economic Association</em>, 21(1), 293–325. <a href="https://doi.org/10.1093/jeea/jvac035">DOI</a></li>
+<li>Cristina Arellano &amp; Yan Bai &amp; Gabriel Mihalache (2024). <em> Monetary Policy and Sovereign Risk in Emerging Economies (NK-Default)</em>. Working paper.</li>
 </ul>
 
 <h2 id="lenders">Lenders, Global Factors</h2>
 <ul>
-<li>Borri, Nicola and Verdelhan, Adrien, <em>Sovereign Risk Premia</em> (September 14, 2011). working paper</li>
-<li>Lizarazo, Sandra Valentina, 2013. "<em>Default risk and risk averse international investors,</em>" Journal of International Economics, Elsevier, vol. 89(2), pages 317-330. <a href="https://doi.org/10.1016/j.jinteco.2012.08.006">https://doi.org/10.1016/j.jinteco.2012.08.006</a> </li>
-<li>Aguiar, M. &amp; Chatterjee, S. &amp; Cole, H. &amp; Stangebye, Z., 2016. "<em>Quantitative Models of Sovereign Debt Crises,</em>" Handbook of Macroeconomics, in: J. B. Taylor &amp; Harald Uhlig (ed.), Handbook of Macroeconomics, edition 1, volume 2, chapter 21, pages 1697-1755, Elsevier.</li>
-<li>Francis A. Longstaff &amp; Jun Pan &amp; Lasse H. Pedersen &amp; Kenneth J. Singleton, 2011. "<em>How Sovereign Is Sovereign Credit Risk?,</em>" American Economic Journal: Macroeconomics, American Economic Association, vol. 3(2), pages 75-103, April. <a href="https://www.aeaweb.org/articles?id=10.1257/mac.3.2.75">https://www.aeaweb.org/articles?id=10.1257/mac.3.2.75</a> </li>
-<li>Yan Bai &amp; Fabrizio Perri &amp; Patrick Kehoe, 2019. "<em>World financial cycles,</em>" working paper</li>
-<li>Juan Morelli &amp; Diego Perez &amp; Pablo Ottonello, 2019. "<em>Global Banks and Systemic Debt Crises,</em>" working paper</li>
+<li>Nicola Borri &amp; Adrien Verdelhan (2011). <em> Sovereign Risk Premia</em>. Working paper.</li>
+<li>Lizarazo, S. V. (2013). Default risk and risk averse international investors. <em>Journal of International Economics</em>, 89(2), 317–330. <a href="https://doi.org/10.1016/j.jinteco.2012.08.006">DOI</a></li>
+<li>Aguiar, M., Chatterjee, S., Cole, H., &amp; Stangebye, Z. (2016). Quantitative Models of Sovereign Debt Crises. <em>Handbook of Macroeconomics</em>, 1697–1755. <a href="https://doi.org/10.1016/bs.hesmac.2016.04.005">DOI</a></li>
+<li>Longstaff, F. A., Pan, J., Pedersen, L. H., &amp; Singleton, K. J. (2011). How Sovereign Is Sovereign Credit Risk? <em>American Economic Journal: Macroeconomics</em>, 3(2), 75–103. <a href="https://doi.org/10.1257/mac.3.2.75">DOI</a></li>
+<li>Morelli, J. M., Ottonello, P., &amp; Perez, D. J. (2022). Global Banks and Systemic Debt Crises. <em>Econometrica</em>, 90(2), 749–798. <a href="https://doi.org/10.3982/ecta17433">DOI</a></li>
+<li>Johri, A., Khan, S., &amp; Sosa-Padilla, C. (2022). Interest rate uncertainty and sovereign default risk. <em>Journal of International Economics</em>, 139, 103681. <a href="https://doi.org/10.1016/j.jinteco.2022.103681">DOI</a></li>
+<li>Yan Bai &amp;  Patrick Kehoe &amp; Peirlauro Lopez &amp; Fabrizio Perri (2024). <em> World Financial Cycles</em>. Working paper.</li>
+<li>Victor Almeida &amp; Carlos Esquivel &amp; Timothy E. Kehoe &amp; Juan Pablo Nicolini (2024). <em> Default and Interest Rate Shocks: Renegotiation Matters</em>. Working paper.</li>
 </ul>
 
-<h2 id="secondary">Secondary Markets</h2>
+<h2 id="primary">Primary and Secondary Markets</h2>
 <ul>
-<li>Jeremy Bulow &amp; Kenneth Rogoff, 1988. "<em>The Buyback Boondoggle,</em>" Brookings Papers on Economic Activity, Economic Studies Program, The Brookings Institution, vol. 19(2), pages 675-704.</li>
-<li>Fernando Broner &amp; Alberto Martin &amp; Jaume Ventura, 2010. "<em>Sovereign Risk and Secondary Markets,</em>" American Economic Review, American Economic Association, vol. 100(4), pages 1523-1555, September. <a href="http://www.aeaweb.org/articles.php?doi=10.1257/aer.100.4.1523">http://www.aeaweb.org/articles.php?doi=10.1257/aer.100.4.1523</a></li>
-<li>Mark Aguiar &amp; Manuel Amador &amp; Hugo Hopenhayn &amp; Iván Werning, 2019. "<em>Take the Short Route: Equilibrium Default and Debt Maturity,</em>" Econometrica, Econometric Society, vol. 87(2), pages 423-462, March. <a href="https://doi.org/10.3982/ECTA14806">https://doi.org/10.3982/ECTA14806</a> </li>
-<li>Gaston Chaumont, 2019. "<em>Sovereign Debt, Default Risk, and the Liquidity of Government Bonds,</em>" working paper</li>
+<li>Bulow, J., Rogoff, K., &amp; Dornbusch, R. (1988). The Buyback Boondoggle. <em>Brookings Papers on Economic Activity</em>, 1988(2), 675. <a href="https://doi.org/10.2307/2534539">DOI</a></li>
+<li>Broner, F., Martin, A., &amp; Ventura, J. (2010). Sovereign Risk and Secondary Markets. <em>American Economic Review</em>, 100(4), 1523–1555. <a href="https://doi.org/10.1257/aer.100.4.1523">DOI</a></li>
+<li>Aguiar, M., Amador, M., Hopenhayn, H., &amp; Werning, I. (2019). Take the Short Route: Equilibrium Default and Debt Maturity. <em>Econometrica</em>, 87(2), 423–462. <a href="https://doi.org/10.3982/ecta14806">DOI</a></li>
+<li>Gaston Chaumont (2019). <em> Sovereign Debt, Default Risk, and the Liquidity of Government Bonds</em>. Working paper.</li>
+<li>Cole, H. L., Neuhann, D., &amp; Ordoñez, G. (2024). Information Spillovers and Sovereign Debt: Theory Meets the Eurozone Crisis. <em>Review 
+of Economic Studies</em>. <a href="https://doi.org/10.1093/restud/rdae017">DOI</a></li>
+<li>Cole, H., Neuhann, D., &amp; Ordoñez, G. (2022). Asymmetric Information and Sovereign Debt: Theory Meets Mexican Data. <em>Journal of Political Economy</em>, 130(8), 2055–2109. <a href="https://doi.org/10.1086/720139">DOI</a></li>
+<li>Ricardo Alves Monteiro &amp; Stelios Fourakis (2024). <em> Sovereign Debt Auctions with Strategic Interactions</em>. Working paper.</li>
 </ul>
 
 <h2 id="passthru">Sovereign Risk Pass-through and the "Doom Loop"</h2>
 <ul>
-<li>Gennaioli, N., Martin, A. and Rossi, S. (2014), <em>Sovereign Default, Domestic Banks, and Financial Institutions</em>. The Journal of Finance, 69: 819-866. doi:10.1111/jofi.12124</li>
-<li>Luigi Bocola, 2016. "<em>The Pass-Through of Sovereign Risk,</em>" Journal of Political Economy, University of Chicago Press, vol. 124(4), pages 879-926. <a href="http://dx.doi.org/10.1086/686734">http://dx.doi.org/10.1086/686734</a> </li>
-<li>Markus K. Brunnermeier &amp; Luis Garicano &amp; Philip R. Lane &amp; Marco Pagano &amp; Ricardo Reis &amp; Tano Santos &amp; David Thesmar &amp; Stijn Van Nieuwerburgh &amp; Dimitri Vayanos, 2016. "<em>The Sovereign-Bank Diabolic Loop and ESBies,</em>" American Economic Review, American Economic Association, vol. 106(5), pages 508-512, May. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.p20161107">https://www.aeaweb.org/articles?id=10.1257/aer.p20161107</a> </li>
-<li>Sosa-Padilla, César, 2018. "<em>Sovereign defaults and banking crises,</em>" Journal of Monetary Economics, Elsevier, vol. 99(C), pages 88-105. <a href="https://doi.org/10.1016/j.jmoneco.2018.07.004">https://doi.org/10.1016/j.jmoneco.2018.07.004</a> </li>
-<li>Cristina Arellano &amp; Yan Bai &amp; Luigi Bocola, 2019. "<em>Sovereign Default Risk and Firm Heterogeneity,</em>" working paper</li>
+<li>Gennaioli, N., Martin, A., &amp; Rossi, S. (2014). Sovereign Default, Domestic Banks, and Financial Institutions. <em>The Journal of Finance</em>, 69(2), 819–866. <a href="https://doi.org/10.1111/jofi.12124">DOI</a></li>
+<li>Bocola, L. (2016). The Pass-Through of Sovereign Risk. <em>Journal of Political Economy</em>, 124(4), 879–926. <a href="https://doi.org/10.1086/686734">DOI</a></li>
+<li>Brunnermeier, M. K., Garicano, L., Lane, P. R., Pagano, M., Reis, R., Santos, T., Thesmar, D., Van Nieuwerburgh, S., &amp; Vayanos, D. 
+(2016). The Sovereign-Bank Diabolic Loop and ESBies. <em>American Economic Review</em>, 106(5), 508–512. <a href="https://doi.org/10.1257/aer.p20161107">DOI</a></li>
+<li>Sosa-Padilla, C. (2018). Sovereign defaults and banking crises. <em>Journal of Monetary Economics</em>, 99, 88–105. <a href="https://doi.org/10.1016/j.jmoneco.2018.07.004">DOI</a></li>
+<li>Francisco Roldán (2024). The Aggregate-Demand Doom Loop: Precautionary Motives and the Welfare Costs of Sovereign Risk. <em>American Economic Journal: Macroeconomics</em> </li>
+<li>Cristina Arellano &amp; Yan Bai &amp; Luigi Bocola (2024). <em> Sovereign Default Risk and Firm Heterogeneity</em>. Working paper.</li>
+<li>Sewon Hur &amp; César Sosa-Padilla &amp; Zeynep Yom (2024). <em> Optimal Bailouts in Banking and Sovereign Crises</em>. Working paper.</li>
 </ul>
 
 <h2 id="polecon">Political Economy</h2>
 <ul>
-<li>Cuadra, Gabriel, and Horacio Sapriza (2008). "<em>Sovereign Default, Interest Rates and Political Uncertainty in Emerging Markets,</em>" Journal of International Economics, vol. 76, no. 1, pp. 78-88. <a href="https://doi.org/10.1016/j.jinteco.2008.05.001">https://doi.org/10.1016/j.jinteco.2008.05.001</a></li>
-<li>Juan Carlos Hatchondo &amp; Leonardo Martinez &amp; Horacio Sapriza, 2009. "<em>Heterogeneous Borrowers In Quantitative Models Of Sovereign Default,</em>" International Economic Review, Department of Economics, University of Pennsylvania and Osaka University Institute of Social and Economic Research Association, vol. 50(4), pages 1129-1151, November. <a href="https://doi.org/10.1111/j.1468-2354.2009.00562.x">https://doi.org/10.1111/j.1468-2354.2009.00562.x</a></li>
-<li>Scholl, Almuth, 2017. "<em>The dynamics of sovereign default risk and political turnover,</em>" Journal of International Economics, Elsevier, vol. 108(C), pages 37-53. <a href="https://doi.org/10.1016/j.jinteco.2017.05.002">https://doi.org/10.1016/j.jinteco.2017.05.002</a></li>
-<li>Chatterjee, Satyajit &amp; Eyigungor, Burcu, 2019. "<em>Endogenous political turnover and fluctuations in sovereign default risk,</em>" Journal of International Economics, Elsevier, vol. 117(C), pages 37-50. <a href="https://doi.org/10.1016/j.jinteco.2018.12.006">https://doi.org/10.1016/j.jinteco.2018.12.006</a></li>
-<li>Johnny Cotoc &amp; Alok Johri &amp; Cesar Sosa-Padilla, 2019. "<em>Debt, Defaults and Dogma: politics and the dynamics of sovereign debt markets,</em>" working paper</li>
-<li>Marina Azzimonti &amp; Vincenzo Quadrini, 2019. "<em>International spillovers and `ex-ante' efficient bailouts,</em>" working paper</li>
-<li>Aguiar, M., Amador, M. &amp; Fourakis, S. "<em>On the Welfare Losses from External Sovereign Borrowing.</em>" IMF Econ Rev 68, 163–194 (2020). https://doi.org/10.1057/s41308-019-00103-2</li>
-<li>Nirvana Mitra, 2019, "<em>Political Constraints and Sovereign Default Premia,</em>" working paper</li>
+<li>Cuadra, G., &amp; Sapriza, H. (2008). Sovereign default, interest rates and political uncertainty in emerging markets. <em>Journal of International Economics</em>, 76(1), 78–88. <a href="https://doi.org/10.1016/j.jinteco.2008.05.001">DOI</a></li>
+<li>Hatchondo, J. C., Martinez, L., &amp; Sapriza, H. (2009). Heterogenous Borrowers in Quantitative Models of Sovereign Default. <em>International Economic Review</em>, 50(4), 1129–1151. <a href="https://doi.org/10.1111/j.1468-2354.2009.00562.x">DOI</a></li>
+<li>Scholl, A. (2017). The dynamics of sovereign default risk and political turnover. <em>Journal of International Economics</em>, 108, 37–53. <a href="https://doi.org/10.1016/j.jinteco.2017.05.002">DOI</a></li>
+<li>Chatterjee, S., &amp; Eyigungor, B. (2019). Endogenous political turnover and fluctuations in sovereign default risk. <em>Journal of International Economics</em>, 117, 37–50. <a href="https://doi.org/10.1016/j.jinteco.2018.12.006">DOI</a></li>
+<li>Johnny Cotoc &amp; Alok Johri &amp; Cesar Sosa-Padilla (2019). <em>Debt, Defaults and Dogma: politics and the dynamics of sovereign debt markets</em>. Working paper.</li>
+<li>Aguiar, M., Amador, M., &amp; Fourakis, S. (2020). On the Welfare Losses from External Sovereign Borrowing. <em>IMF Economic Review</em>, 68(1), 163–194. <a href="https://doi.org/10.1057/s41308-019-00103-2">DOI</a></li>
+<li>Azzimonti, M., &amp; Quadrini, V. (2023). International Spillovers and Bailouts. <em>Review of Economic Studies</em>, 91(1), 77–128. <a href="https://doi.org/10.1093/restud/rdad025">DOI</a></li>
+<li>Azzimonti, M., &amp; Mitra, N. (2023). Political constraints and sovereign default. <em>Journal of International Money and Finance</em>, 137, 102895. <a href="https://doi.org/10.1016/j.jimonfin.2023.102895">DOI</a></li>
 </ul>
 
 <h2 id="fiscal">Fiscal Policy</h2>
 <ul>
-<li>Gabriel Cuadra &amp; Juan Sanchez &amp; Horacio Sapriza, 2010. "Fiscal Policy and Default Risk in Emerging Markets," Review of Economic Dynamics, Elsevier for the Society for Economic Dynamics, vol. 13(2), pages 452-469, April. <a href="http://dx.doi.org/10.1016/j.red.2009.07.002">http://dx.doi.org/10.1016/j.red.2009.07.002</a></li>
-<li>Cristina Arellano &amp; Yan Bai, 2017. "Fiscal austerity during debt crises," Economic Theory, Springer;Society for the Advancement of Economic Theory (SAET), vol. 64(4), pages 657-673, December. <a href="http://link.springer.com/10.1007/s00199-016-1008-x">http://link.springer.com/10.1007/s00199-016-1008-x</a></li>
-<li>Gonzalo Fernandez-de-Cordoba &amp; Pau Pujolas &amp; Jose Torres, 2017. "Fiscal Discipline and Defaults," Review of Economic Dynamics, Elsevier for the Society for Economic Dynamics, vol. 24, pages 1-13, March. <a href="http://dx.doi.org/10.1016/j.red.2016.12.001">http://dx.doi.org/10.1016/j.red.2016.12.001</a></li>
-<li>Javier Bianchi &amp; Pablo Ottonello &amp; Ignacio Presno, 2019. "Fiscal Stimulus Under Sovereign Risk," working paper</li>
-<li>Nirvana Mitra, 2019, "<em>Political Constraints and Sovereign Default Premia,</em>" working paper</li>
+<li>Cuadra, G., Sanchez, J. M., &amp; Sapriza, H. (2010). Fiscal policy and default risk in emerging markets. <em>Review of Economic Dynamics</em>, 13(2), 452–469. <a href="https://doi.org/10.1016/j.red.2009.07.002">DOI</a></li>
+<li>Arellano, C., &amp; Bai, Y. (2016). Fiscal austerity during debt crises. <em>Economic Theory</em>, 64(4), 657–673. <a href="https://doi.org/10.1007/s00199-016-1008-x">DOI</a></li>
+<li>de-Córdoba, G. F., Pujolas, P. S., &amp; Torres, J. L. (2017). Fiscal discipline and defaults. <em>Review of Economic Dynamics</em>, 24, 1–13. <a href="https://doi.org/10.1016/j.red.2016.12.001">DOI</a></li>
+<li>Bianchi, J., Ottonello, P., &amp; Presno, I. (2023). Fiscal Stimulus under Sovereign Risk. <em>Journal of Political Economy</em>, 131(9), 2328–2369. <a href="https://doi.org/10.1086/724317">DOI</a></li>
 </ul>
 
-<h2 id="domestic">Domestic Heterogeneity, Inequality</h2>
+<h2 id="domestic">Domestic Heterogeniety, Inequality</h2>
 <ul>
-<li>Pablo D'Erasmo &amp; Enrique G. Mendoza, 2016. "<em>Distributional Incentives In An Equilibrium Model Of Domestic Sovereign Default,</em>" Journal of the European Economic Association, European Economic Association, vol. 14(1), pages 7-44, February. <a href="http://hdl.handle.net/10.1111/jeea.2016.14.issue-1">http://hdl.handle.net/10.1111/jeea.2016.14.issue-1</a></li>
-<li>Pablo D'Erasmo &amp; Enrique G. Mendoza, 2019. "<em>History Remembered: Optimal Sovereign Default on Domestic and External Debt,</em>" working paper</li>
-<li>Minjie Deng, 2019, "<em>Inequality, Taxation, and Sovereign Default Risk,</em>" working paper</li>
+<li>D’Erasmo, P., &amp; Mendoza, E. G. (2016). Distributional Incentives in an Equilibrium Model of Domestic Sovereign Default. <em>Journal of the European Economic Association</em>, 14(1), 7–44. <a href="https://doi.org/10.1111/jeea.12168">DOI</a></li>
+<li>D’Erasmo, P., &amp; Mendoza, E. G. (2021). History remembered: Optimal sovereign default on domestic and external debt. <em>Journal of Monetary Economics</em>, 117, 969–989. <a href="https://doi.org/10.1016/j.jmoneco.2020.07.006">DOI</a></li>
+<li>Deng, M. (2024). Inequality, Taxation, and Sovereign Default Risk. <em>American Economic Journal: Macroeconomics</em>, 16(2), 217–249. <a href="https://doi.org/10.1257/mac.20210133">DOI</a></li>
+<li>Jeon, K., &amp; Kabukcuoglu, Z. (2018). Income inequality and sovereign default. <em>Journal of Economic Dynamics and Control</em>, 95, 211–232. <a href="https://doi.org/10.1016/j.jedc.2018.08.008">DOI</a></li>
 </ul>
 
-<h2 id="contracting">Optimal Contracting Approaches</h2>
+<h2 id="optimal">Optimal Contracting, Commitment</h2>
 <ul>
-<li>Arpad Abraham &amp; Eva Carceles-Poveda &amp; Yan Liu &amp; Ramon Marimon, 2018, "<em>On the optimal design of a Financial Stability Fund,</em>" working paper</li>
-<li>Alessandro Dovis, <em>Efficient Sovereign Default</em>, The Review of Economic Studies, Volume 86, Issue 1, January 2019, Pages 282–312, <a href="https://doi.org/10.1093/restud/rdy012">https://doi.org/10.1093/restud/rdy012</a></li>
-<li>M&uuml;ller, Andreas, Kjetil Storesletten, and Fabrizio Zilibotti. 2019. "<em>Sovereign Debt and Structural Reforms</em>." American Economic Review, 109 (12): 4220-59. <a href="https://doi.org/10.1257/aer.20161457">https://doi.org/10.1257/aer.20161457</a></li>
-<li>Mark Aguiar, Manuel Amador, <em>A contraction for sovereign debt models</em>, Journal of Economic Theory, Volume 183, 2019, Pages 842-875, ISSN 0022-0531, <a href="https://doi.org/10.1016/j.jet.2019.08.005">https://doi.org/10.1016/j.jet.2019.08.005</a></li>
-<li>Juan Hatchondo &amp; Francisco Roch &amp; Leonardo Martinez, 2019. "<em>Constrained efficient borrowing with sovereign default risk,</em>" working paper</li>
+<li>Arpad Abraham &amp; Eva Carceles-Poveda &amp; Yan Liu &amp; Ramon Marimon (2018). <em> On the optimal design of a Financial Stability Fund</em>. Working paper.</li>
+<li>Adam, K., &amp; Grill, M. (2017). Optimal Sovereign Default. <em>American Economic Journal: Macroeconomics</em>, 9(1), 128–164. <a href="https://doi.org/10.1257/mac.20140093">DOI</a></li>
+<li>Dovis, A. (2018). Efficient Sovereign Default. <em>The Review of Economic Studies</em>. <a href="https://doi.org/10.1093/restud/rdy012">DOI</a></li>
+<li>Müller, A., Storesletten, K., &amp; Zilibotti, F. (2019). Sovereign Debt and Structural Reforms. <em>American Economic Review</em>, 109(12), 4220–4259. <a href="https://doi.org/10.1257/aer.20161457">DOI</a></li>
+<li>Aguiar, M., &amp; Amador, M. (2019). A contraction for sovereign debt models. <em>Journal of Economic Theory</em>, 183, 842–875. <a href="https://doi.org/10.1016/j.jet.2019.08.005">DOI</a></li>
+<li>Juan Hatchondo &amp; Francisco Roch &amp; Leonardo Martinez (2019). <em> Constrained efficient borrowing with sovereign default risk</em>. Working paper.</li>
+<li>Xavier Mateos-Planas &amp; Sean McCrary &amp; José-Víctor Ríos-Rull &amp; Adrien Wicht (2023). <em>Commitment in the Canonical Sovereign Default Model</em>. Working paper.</li>
 </ul>
 
 <h2 id="computation">Computation</h2>
 <ul>
-<li>Juan Carlos Hatchondo &amp; Leonardo Martinez &amp; Horacio Sapriza, 2010. "<em>Quantitative properties of sovereign default models: solution methods,</em>" Review of Economic Dynamics, Elsevier for the Society for Economic Dynamics, vol. 13(4), pages 919-933, October. <a href="http://dx.doi.org/10.1016/j.red.2010.03.001">http://dx.doi.org/10.1016/j.red.2010.03.001</a></li>
-<li>Chatterjee, Satyajit, and Burcu Eyigungor. 2012. "<em>Maturity, Indebtedness, and Default Risk.</em>" American Economic Review, 102 (6): 2674-99. DOI: 10.1257/aer.102.6.2674</li>
-<li>Juan M. Sanchez &amp; Maximiliano Dvorkin &amp; Emircan Yurdagul &amp; Horacio Sapriza, 2019. "<em>Sovereign Debt Restructurings,</em>" working paper</li>
-<li>Grey Gordon, 2019. "<em>Efficient Computation with Taste Shocks,</em>" working paper</li>
+<li>Hatchondo, J. C., Martinez, L., &amp; Sapriza, H. (2010). Quantitative properties of sovereign default models: Solution methods 
+matter. <em>Review of Economic Dynamics</em>, 13(4), 919–933. <a href="https://doi.org/10.1016/j.red.2010.03.001">DOI</a></li>
+<li>Chatterjee, S., &amp; Eyigungor, B. (2012). Maturity, Indebtedness, and Default Risk. <em>American Economic Review</em>, 102(6), 2674–2699. <a href="https://doi.org/10.1257/aer.102.6.2674">DOI</a></li>
+<li>Dvorkin, M., Sánchez, J. M., Sapriza, H., &amp; Yurdagul, E. (2021). Sovereign Debt Restructurings. <em>American Economic Journal: 
+Macroeconomics</em>, 13(2), 26–77. <a href="https://doi.org/10.1257/mac.20190220">DOI</a></li>
 </ul>
 
-<h2 id="optimalclosed">Optimal Maturity in the Closed Economy</h2>
+<h2 id="closed">Optimal Maturity in the Closed Economy</h2>
 <ul>
-<li>Angeletos, G.-M. (2002), <em>"Fiscal policy with non-contingent debt and optimal maturity structure,”</em> Quarterly Journal of Economics, 117, 1105–1131.</li>
-<li>Elisa Faraglia &amp; Albert Marcet &amp; Rigas Oikonomou &amp; Andrew Scott, "<em>Government Debt Management: The Long and the Short of It</em>," The Review of Economic Studies, Volume 86, Issue 6, November 2019, Pages 2554–2604, <a href="https://doi.org/10.1093/restud/rdy061">https://doi.org/10.1093/restud/rdy061</a></li>
-<li>Anmol Bhandari et al., 2019. "<em>The Optimal Maturity of Government Debt,</em>" working paper</li>
-<li>Sergii Kiiashko, 2019. "<em>Optimal Time-Consistent Government Debt Maturity, Fiscal Policy, and Default</em>," working paper</li>
+<li>Angeletos, G.-M. (2002). Fiscal Policy with Noncontingent Debt and the Optimal Maturity Structure. <em>The Quarterly Journal of Economics</em>, 117(3), 1105–1131. <a href="https://doi.org/10.1162/003355302760193977">DOI</a></li>
+<li>Faraglia, E., Marcet, A., Oikonomou, R., &amp; Scott, A. (2018). Government Debt Management: The Long and the Short of It. <em>The Review of Economic Studies</em>, 86(6), 2554–2604. <a href="https://doi.org/10.1093/restud/rdy061">DOI</a></li>
+<li>Léo Aparisi de Lannoy &amp; Anmol Bhandari &amp; David Evans &amp; Mikhail Golosov &amp; Thomas Sargent (2022). <em> Managing Public Portfolios</em>. Working paper.</li>
+<li>Bhandari, A., Evans, D., Golosov, M., &amp; Sargent, T. J. (2016). Fiscal Policy and Debt Management with Incomplete Markets. <em>The Quarterly Journal of Economics</em>, 132(2), 617–663. <a href="https://doi.org/10.1093/qje/qjw041">DOI</a></li>
 </ul>
 
-<h2 id="conttime">Continuous Time Methods</h2>
+<h2 id="continuous">Continuous Time Methods</h2>
 <ul>
-<li>Fabrice Tourre, 2017. <em>"A Macro-Finance Approach to Sovereign Debt Spreads and Returns,"</em> working paper</li>
-<li>Galo Nu&ntilde;o &amp; Carlos Thomas, 2019. <em>"Monetary Policy and Sovereign Debt Sustainability,"</em> working paper</li>
-<li>Saki Bigio &amp; Galo Nu&ntilde;o &amp; Juan Passadore, 2019. "<em>A Framework for Debt-Maturity Management</em>," working paper</li>
-<li>Gideon Bornstein, <em>"A Continuous-Time Model of Sovereign Debt,"</em> Journal of Economic Dynamics and Control, Volume 118, 2020, 103963, ISSN 0165-1889, <a href="https://doi.org/10.1016/j.jedc.2020.103963">https://doi.org/10.1016/j.jedc.2020.103963</a></li>
-<li>Sergio Rebelo &amp; Neng Wang &amp; Jinqiang Yang, 2021. <em>"Rare Disasters, Financial Development, and Sovereign Debt,"</em> working paper</li>
+<li>Fabrice Tourre (2017). <em> A Macro-Finance Approach to Sovereign Debt Spreads and Returns</em>. Working paper.</li>
+<li>Hurtado, S., Nuño, G., &amp; Thomas, C. (2022). Monetary Policy and Sovereign Debt Sustainability. <em>Journal of the European Economic Association</em>, 21(1), 293–325. <a href="https://doi.org/10.1093/jeea/jvac035">DOI</a></li>
+<li>Bigio, S., Nuño, G., &amp; Passadore, J. (2023). Debt-Maturity Management with Liquidity Costs. <em>Journal of Political Economy Macroeconomics</em>, 1(1), 119–190. <a href="https://doi.org/10.1086/723392">DOI</a></li>
+<li>Bornstein, G. (2020). A Continuous-Time Model of Sovereign Debt. <em>Journal of Economic Dynamics and Control</em>, 118, 103963. <a href="https://doi.org/10.1016/j.jedc.2020.103963">DOI</a></li>
+<li>Rebelo, S., Wang, N., &amp; Yang, J. <em>Rare Disasters</em>, Financial Development, and Sovereign Debt. <em>The Journal of Finance</em>, 77(5), 2719–2764. <a href="https://doi.org/10.1111/jofi.13175">DOI</a></li>
+</ul>
+
+<h2 id="learning">Learning, Reputation, and Ambiguity</h2>
+<ul>
+<li>Roch, F., &amp; Roldán, F. (2023). Uncertainty, Sovereign Default Risk, and State-Contingent Debt. <em>Journal of Political Economy Macroeconomics</em>, 1(2), 334–370. <a href="https://doi.org/10.1086/723950">DOI</a></li>
+<li>Paluszynski, R. (2023). Learning about Debt Crises. <em>American Economic Journal: Macroeconomics</em>, 15(1), 106–134. <a href="https://doi.org/10.1257/mac.20190189">DOI</a></li>
+<li>Amador, M., &amp; Phelan, C. (2021). Reputation and Sovereign Default. <em>Econometrica</em>, 89(4), 1979–2010. <a href="https://doi.org/10.3982/ecta16685">DOI</a></li>
+<li>Morelli, J. M., &amp; Moretti, M. (2023). Information Frictions, Reputation, and Sovereign Spreads. <em>Journal of Political Economy</em>, 131(11), 3066–3102. <a href="https://doi.org/10.1086/724855">DOI</a></li>
+<li>Marcos Chamon &amp; Francisco Roldán (2024). Sovereign Debt Tolerance with Potentially Permanent Costs of Default. <em>IMF Economic Review</em>. <a href="https://doi.org/10.1057/s41308-024-00260-z">DOI</a></li>
+<li>Stelios Fourakis (2024). <em> Sovereign Default and Government Reputation</em>. Working paper.</li>
+</ul>
+
+<h2 id="legal">Legal and Contractual Aspects</h2>
+<ul>
+<li>Sobel, M. (2016). Strengthening collective action clauses: catalysing change—the back story. <em>Capital Markets Law Journal</em>. <a href="https://doi.org/10.1093/cmlj/kmv060">DOI</a></li>
+<li>Schumacher, J., Trebesch, C., &amp; Enderlein, H. (2021). Sovereign defaults in court. <em>Journal of International Economics</em>, 131, 103388. <a href="https://doi.org/10.1016/j.jinteco.2020.103388">DOI</a></li>
+<li>Martinez, L., Roch, F., Roldán, F., &amp; Zettelmeyer, J. (2023). Sovereign debt. <em>Research Handbook of Financial Markets</em>, 378–405. <a href="https://doi.org/10.4337/9781800375321.00026">DOI</a></li>
+<li>Gregory Makoff, (2024). <em>Default: The Landmark Court Battle over Argentina's $100 Billion Debt Restructuring.</em> <a href="https://press.georgetown.edu/Book/Default">DOI</a></li>
 </ul>
 
 <p class="float-right"><mark><a href="../../">Back to my website</a></mark></p>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
