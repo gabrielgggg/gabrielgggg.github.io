@@ -18,6 +18,22 @@ li.paper { margin-top: 0.5em !important; margin-bottom: 1.5em !important; }
 <title>Gabriel Mihalache</title>
 <meta name="description" content="Gabriel Mihalache, American economist, Assistant Professor of Economics at Ohio State. International Macroeconomics: sovereign debt and default, maturity structure, capital accumulation and sectoral reallocation, fiscal-monetary interactions, public finance during epidemics.">
 <script defer src="https://loglesk.io/js/script.js" data-key="q6wfc"></script>
+<script>
+/* Bridge Loglesk HTML event classes → loglesk(name, { props })
+   Classes: loglesk-event-name=PDF loglesk-event-paper=nkdefault */
+document.addEventListener("click", function (e) {
+  var el = e.target.closest("[class*='loglesk-event-name=']");
+  if (!el || typeof loglesk !== "function") return;
+  var name = null, props = {}, parts = (el.getAttribute("class") || "").split(/\s+/);
+  for (var i = 0; i < parts.length; i++) {
+    var m = /^loglesk-event-([^=]+)=(.*)$/.exec(parts[i]);
+    if (!m) continue;
+    if (m[1] === "name") name = m[2];
+    else props[m[1]] = m[2];
+  }
+  if (name) loglesk(name, Object.keys(props).length ? { props: props } : undefined);
+}, true);
+</script>
 </head>
 <body>
 <div class="container-lg my-3">
@@ -37,8 +53,8 @@ li.paper { margin-top: 0.5em !important; margin-bottom: 1.5em !important; }
 <a href="mailto:mihalache.2@osu.edu">mihalache.2@osu.edu</a></p>
 <p><i class="bi bi-building"></i> 212 Bricker Hall, The Ohio State University, Columbus, OH 43210</p>
 
-<p id="cvitae"><i class="bi bi-file-earmark-binary"></i> <a href="./docs/CV_Mihalache.pdf" onclick="loglesk('CV PDF')">Curriculum Vitae (PDF)</a></p>
-<p><i class="bi bi-speedometer"></i> <a href="https://scholar.google.com/citations?user=LoNYYR4AAAAJ&hl=en" onclick="loglesk('GS')">Google Scholar</a>, <a href="https://github.com/gabrielgggg/" onclick="loglesk('Github')">GitHub</a></p>
+<p id="cvitae"><i class="bi bi-file-earmark-binary"></i> <a href="./docs/CV_Mihalache.pdf" class="loglesk-event-name=CV">Curriculum Vitae (PDF)</a></p>
+<p><i class="bi bi-speedometer"></i> <a href="https://scholar.google.com/citations?user=LoNYYR4AAAAJ&hl=en" class="loglesk-event-name=GS">Google Scholar</a>, <a href="https://github.com/gabrielgggg/" class="loglesk-event-name=Github">GitHub</a></p>
 </div>
 
 <div class="col-lg-9">
@@ -72,8 +88,8 @@ without reservations: <a href="https://sangdongkim.com/">Sangdong Kim</a> and <a
 <ul class="">
 
 <li class="paper"><mark>"Global Imbalances, Trade, and Sovereign Risk,"</mark> Nov 2025 <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/BDLM.pdf" class="btn btn-light">Slides</a> 
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#tradeModal">Bib</button>
+<a href="./docs/BDLM.pdf" class="btn btn-light loglesk-event-name=Slides loglesk-event-paper=bdlm">Slides</a> 
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=bdlm" data-bs-toggle="modal" data-bs-target="#tradeModal">Bib</button>
 </div><br>
 with <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a>,
 <a href="https://www.minjiedeng.me/" class="text-secondary">Minjie Deng</a>, and
@@ -100,8 +116,8 @@ year = "2025", }</pre>
 </div></li>
 
 <li class="paper"><mark>"Sovereign Partial Default in Continuous Time,"</mark> Feb 2024 <div class="btn-group btn-group-sm" role="group">
-<a href="https://drive.google.com/file/d/1bfXP2wdqxDvZolEa2YKrkxkQWs_dsWMs/view" class="btn btn-light">PDF</a> 
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#partialModal">Bib</button>
+<a href="https://drive.google.com/file/d/1bfXP2wdqxDvZolEa2YKrkxkQWs_dsWMs/view" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=partial">PDF</a> 
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=partial" data-bs-toggle="modal" data-bs-target="#partialModal">Bib</button>
 </div><br>
 with <a href="https://sangdongkim.com/" class="text-secondary">Sangdong Kim</a><br>
 <div class="modal fade" id="partialModal" tabindex="-1" role="dialog">
@@ -126,8 +142,8 @@ year = "2024", }</pre>
 </div></li>
 
 <li class="paper"><mark>"The Maturity and Payment Schedule of Sovereign Debt,"</mark> Jun 2016 <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/BKM_wp.pdf" class="btn btn-light">PDF</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#dtModal">Bib</button>
+<a href="./docs/BKM_wp.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=bkm_wp">PDF</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=bkm_wp" data-bs-toggle="modal" data-bs-target="#dtModal">Bib</button>
 </div><br>
 with <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a> and <a href="https://sites.google.com/site/santaf78/" class="text-secondary">Seon Tae Kim</a>
 <div class="modal fade" id="dtModal" tabindex="-1" role="dialog">
@@ -166,10 +182,10 @@ doi = "10.3386/w20896", }</pre>
 <ul class="">
 
 <li class="paper"><mark>"Monetary Policy and Sovereign Risk in Emerging Economies (NK-Default),"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/ABM_nkdefault.pdf" class="btn btn-light">PDF</a>
-<a href="https://doi.org/10.1093/qje/qjag012" class="btn btn-light">DOI</a> 
-<a href="https://doi.org/10.7910/DVN/CMEFMV" class="btn btn-light">Code</a> 
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#monModal">Bib</button>
+<a href="./docs/ABM_nkdefault.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=nkdefault">PDF</a>
+<a href="https://doi.org/10.1093/qje/qjag012" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=nkdefault">DOI</a> 
+<a href="https://doi.org/10.7910/DVN/CMEFMV" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=nkdefault">Code</a> 
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=nkdefault" data-bs-toggle="modal" data-bs-target="#monModal">Bib</button>
 </div><br>
 with <a href="http://www.cristinaarellano.com" class="text-secondary">Cristina Arellano</a> and <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a><br>
 <strong>The Quarterly Journal of Economics</strong>, 2026, <em>141</em>(2), ISSN 0033-5533
@@ -203,10 +219,10 @@ with <a href="http://www.cristinaarellano.com" class="text-secondary">Cristina A
 </div></li>
 
 <li class="paper"><mark>"Insufficient or Excessive Investment Under Sovereign Default Risk,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/MS_kK.pdf" class="btn btn-light">PDF</a> 
-<a href="https://doi.org/10.1016/j.jinteco.2026.104232" class="btn btn-light">DOI</a>
-<a href="https://data.mendeley.com/datasets/fpfzd2gzf5/2" class="btn btn-light">Code</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kkModal">Bib</button>
+<a href="./docs/MS_kK.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=investment">PDF</a> 
+<a href="https://doi.org/10.1016/j.jinteco.2026.104232" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=investment">DOI</a>
+<a href="https://data.mendeley.com/datasets/fpfzd2gzf5/2" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=investment">Code</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=investment" data-bs-toggle="modal" data-bs-target="#kkModal">Bib</button>
 </div><br>
 with <a href="https://sites.google.com/view/ilhwansong" class="text-secondary">Ilhwan Song</a><br>
 <strong>Journal of International Economics</strong>, 2026, <em>160</em>, ISSN 0022-1996
@@ -238,10 +254,10 @@ author = {Ilhwan Song and Gabriel Mihalache},
 </div></li>
 
 <li class="paper"><mark>"Default and Development,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/LM_development.pdf" class="btn btn-light">PDF</a> 
-  <a href="https://doi.org/10.1016/j.jinteco.2025.104089" class="btn btn-light">DOI</a> 
-  <a href="https://data.mendeley.com/datasets/xd6hywpykg/1" class="btn btn-light">Code</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#devModal">Bib</button>
+<a href="./docs/LM_development.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=development">PDF</a> 
+  <a href="https://doi.org/10.1016/j.jinteco.2025.104089" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=development">DOI</a> 
+  <a href="https://data.mendeley.com/datasets/xd6hywpykg/1" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=development">Code</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=development" data-bs-toggle="modal" data-bs-target="#devModal">Bib</button>
 </div><br>
 with Lei Li<br>
 <strong>Journal of International Economics</strong>, 2025, <em>155C</em>, ISSN 0022-1996
@@ -272,9 +288,9 @@ year = "2025", }</pre>
 </div></li>
   
 <li class="paper"><mark>"Solving default models,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/OREEF_solving.pdf" class="btn btn-light">PDF</a> <a href="https://doi.org/10.1093/acrefore/9780190625979.013.941" class="btn btn-light">DOI</a>
-  <a href="https://github.com/gabrielgggg/defaultModel" class="btn btn-light">Code</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#oreefModal">Bib</button></div><br>
+<a href="./docs/OREEF_solving.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=solving">PDF</a> <a href="https://doi.org/10.1093/acrefore/9780190625979.013.941" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=solving">DOI</a>
+  <a href="https://github.com/gabrielgggg/defaultModel" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=solving">Code</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=solving" data-bs-toggle="modal" data-bs-target="#oreefModal">Bib</button></div><br>
 <strong>Oxford Research Encyclopedia of Economics and Finance</strong>, 2025
 <div class="modal fade" id="oreefModal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg">
@@ -301,8 +317,8 @@ doi = "10.1093/acrefore/9780190625979.013.941", }</pre>
 </div></li>
   
 <li class="paper"><mark>"Comment on `On Wars Sanctions and Sovereign Defaults' by Bianchi and Sosa-Padilla,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="https://doi.org/10.1016/j.jmoneco.2023.10.009" class="btn btn-light">DOI</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#crnyuModal">Bib</button>
+<a href="https://doi.org/10.1016/j.jmoneco.2023.10.009" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=comment">DOI</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=comment" data-bs-toggle="modal" data-bs-target="#crnyuModal">Bib</button>
 </div><br>
 <strong>Journal of Monetary Economics (C-R-NYU 100th Meeting)</strong>, 2024, <em>141</em>, ISSN 1873-1295
 <div class="modal fade" id="crnyuModal" tabindex="-1" role="dialog">
@@ -331,10 +347,10 @@ doi = "10.1016/j.jmoneco.2023.10.009", }</pre>
 </div></li>
 
 <li class="paper"><mark>"Deadly Debt Crises: COVID-19 in Emerging Markets,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/ABM_sir.pdf" class="btn btn-light">PDF</a>
-<a href="https://doi.org/10.1093/restud/rdad058" class="btn btn-light">DOI</a>
-<a href="https://doi.org/10.5281/zenodo.7852998" class="btn btn-light">Code</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#covidModal">Bib</button>
+<a href="./docs/ABM_sir.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=covid">PDF</a>
+<a href="https://doi.org/10.1093/restud/rdad058" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=covid">DOI</a>
+<a href="https://doi.org/10.5281/zenodo.7852998" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=covid">Code</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=covid" data-bs-toggle="modal" data-bs-target="#covidModal">Bib</button>
 </div><br>
 with <a href="http://www.cristinaarellano.com" class="text-secondary">Cristina Arellano</a> and <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a><br>
 <strong>The Review of Economic Studies</strong>, 2023, <em>91</em>(3), ISSN 0034-6527
@@ -368,10 +384,10 @@ with <a href="http://www.cristinaarellano.com" class="text-secondary">Cristina A
 </div></li>
 
 <li class="paper"><mark>"Bargaining over Taxes and Entitlements in the Era of Unequal Growth,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/AKM_budget_rules.pdf" class="btn btn-light">PDF</a> 
-<a href="https://doi.org/10.1111/iere.12625" class="btn btn-light">DOI</a>
-<a href="https://github.com/gabrielgggg/StatusQuoUnequalGrowth" class="btn btn-light">Code</a> 
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#bargainModal">Bib</button>
+<a href="./docs/AKM_budget_rules.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=bargaining">PDF</a> 
+<a href="https://doi.org/10.1111/iere.12625" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=bargaining">DOI</a>
+<a href="https://github.com/gabrielgggg/StatusQuoUnequalGrowth" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=bargaining">Code</a> 
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=bargaining" data-bs-toggle="modal" data-bs-target="#bargainModal">Bib</button>
 </div><br>
 with <a href="http://marina-azzimonti.com/" class="text-secondary">Marina Azzimonti</a> and <a href="https://laurakarpuska.com/" class="text-secondary">Laura Karpuska</a><br>
 <strong>International Economic Review</strong>, 2023, <em>64</em>(3), ISSN 0020-6598
@@ -403,9 +419,9 @@ pages = "893--941", }</pre>
 </div></li>
 
 <li class="paper"><mark>"COVID-19 Vaccination and Financial Frictions,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/ABM_vaccine.pdf" class="btn btn-light">PDF</a>
-<a href="https://doi.org/10.1057/s41308-022-00186-4" class="btn btn-light">DOI</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#vaccineModal">Bib</button>
+<a href="./docs/ABM_vaccine.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=vaccine">PDF</a>
+<a href="https://doi.org/10.1057/s41308-022-00186-4" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=vaccine">DOI</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=vaccine" data-bs-toggle="modal" data-bs-target="#vaccineModal">Bib</button>
 </div><br>
 with <a href="http://www.cristinaarellano.com" class="text-secondary">Cristina Arellano</a> and <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a><br>
 <strong>IMF Economic Review</strong>, 2023, <em>71</em>(1), ISSN 2041-4161
@@ -437,10 +453,10 @@ author = "Cristina Arellano and Yan Bai and Gabriel Mihalache", }</pre>
 </div></li>
 
 <li class="paper"><mark>"Sovereign Default Resolution Through Maturity Extension,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/M_maturity_extension.pdf" class="btn btn-light">PDF</a>
-<a href="https://doi.org/10.1016/j.jinteco.2020.103326" class="btn btn-light">DOI</a>
-<a href="https://data.mendeley.com/datasets/92zn5cdty3/1" class="btn btn-light">Code</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#jie2020Modal">Bib</button>
+<a href="./docs/M_maturity_extension.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=maturity">PDF</a>
+<a href="https://doi.org/10.1016/j.jinteco.2020.103326" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=maturity">DOI</a>
+<a href="https://data.mendeley.com/datasets/92zn5cdty3/1" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=maturity">Code</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=maturity" data-bs-toggle="modal" data-bs-target="#jie2020Modal">Bib</button>
 </div><br>
 <strong>Journal of International Economics</strong>, 2020, <em>125C</em>, ISSN 0022-1996
 <div class="modal fade" id="jie2020Modal" tabindex="-1" role="dialog">
@@ -472,9 +488,9 @@ author = "Gabriel Mihalache", }</pre>
 </li>
 
 <li class="paper"><mark>"Default Risk, Sectoral Reallocation, and Persistent Recessions,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/ABM_reallocation.pdf" class="btn btn-light">PDF</a>
-<a href="https://doi.org/10.1016/j.jinteco.2018.01.004" class="btn btn-light">DOI</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#jie2018Modal">Bib</button>
+<a href="./docs/ABM_reallocation.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=reallocation">PDF</a>
+<a href="https://doi.org/10.1016/j.jinteco.2018.01.004" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=reallocation">DOI</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=reallocation" data-bs-toggle="modal" data-bs-target="#jie2018Modal">Bib</button>
 </div><br>
 with <a href="http://www.cristinaarellano.com" class="text-secondary">Cristina Arellano</a> and <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a><br>
 <strong>Journal of International Economics</strong>, 2018, <em>112</em>, ISSN 0022-1996
@@ -507,9 +523,9 @@ author = "Cristina Arellano and Yan Bai and Gabriel Mihalache", }</pre>
 </li>
 
 <li class="paper"><mark>"The Payment Schedule of Sovereign Debt,"</mark> <div class="btn-group btn-group-sm" role="group">
-<a href="./docs/BKM_schedule.pdf" class="btn btn-light">PDF</a>
-<a href="https://doi.org/10.1016/j.econlet.2017.09.003" class="btn btn-light">DOI</a>
-<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#el2017Modal">Bib</button>
+<a href="./docs/BKM_schedule.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=schedule">PDF</a>
+<a href="https://doi.org/10.1016/j.econlet.2017.09.003" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=schedule">DOI</a>
+<button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=schedule" data-bs-toggle="modal" data-bs-target="#el2017Modal">Bib</button>
 </div><br>
 with <a href="https://sites.google.com/site/yanbai06/" class="text-secondary">Yan Bai</a> and <a href="https://sites.google.com/site/santaf78/" class="text-secondary">Seon Tae Kim</a><br>
 <strong>Economics Letters</strong>, 2017, <em>161</em>, ISSN 0165-1765
