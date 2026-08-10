@@ -1,0 +1,72 @@
+/* Ohio-like chrome: light cards + responsive SVG charts */
+
+.chart-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.15rem 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.chart-wrap svg {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.data-through {
+  font-size: 0.9rem;
+}
+
+.kpi-table {
+  font-size: 0.95rem;
+}
+
+.kpi-table thead th {
+  border-bottom-width: 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #6c757d;
+}
+
+.kpi-table-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Sub-components of total public debt (table rows 2–5) */
+.kpi-table td.kpi-indent {
+  padding-left: 2.75em !important;
+}
+
+.panel-definition {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.panel-source {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.stat-table td,
+.stat-table th {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Acronym hover tooltips (native title via <abbr>) */
+abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+  cursor: help;
+}
+
+.credits {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
