@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Hull</title>
+  <meta name="description" content="Search cities. Their convex hull fills the map.">
+  <link rel="canonical" href="https://gmihalache.com/maps/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="City Hull">
+  <meta property="og:title" content="City Hull">
+  <meta property="og:description" content="Search cities. Their convex hull fills the map.">
+  <meta property="og:url" content="https://gmihalache.com/maps/">
+  <meta property="og:image" content="https://gmihalache.com/maps/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="World map with an orange convex hull spanning Lisbon, Cape Town, and Tokyo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="City Hull">
+  <meta name="twitter:description" content="Search cities. Their convex hull fills the map.">
+  <meta name="twitter:image" content="https://gmihalache.com/maps/og.png">
+  <meta name="twitter:image:alt" content="World map with an orange convex hull spanning Lisbon, Cape Town, and Tokyo">
+
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="map" role="application" aria-label="World map"></div>
+
+  <aside class="panel" id="panel">
+    <header class="panel-head">
+      <h1>City Hull</h1>
+      <p class="tagline">Search cities. Their convex hull fills the map.</p>
+    </header>
+
+    <div class="combobox" id="combobox">
+      <label for="city-search">Add a city</label>
+      <input id="city-search" type="search" placeholder="Tokyo, Lisbon, Cape Town…"
+             autocomplete="off" spellcheck="false" role="combobox"
+             aria-autocomplete="list" aria-expanded="false" aria-controls="city-results">
+      <ul id="city-results" class="results" role="listbox" hidden></ul>
+    </div>
+
+    <dl class="stats" id="stats">
+      <div>
+        <dt>Cities</dt>
+        <dd id="stat-cities">0</dd>
+      </div>
+      <div>
+        <dt>Vertices</dt>
+        <dd id="stat-vertices">0</dd>
+      </div>
+      <div>
+        <dt>Area (approx.)</dt>
+        <dd id="stat-area">—</dd>
+      </div>
+    </dl>
+
+    <p class="hint" id="hint">Add at least three cities to draw a hull.</p>
+    <ul id="selected-list" class="chips"></ul>
+
+    <div class="export-box">
+      <div class="export-row">
+        <label class="select-wrap">
+          <span class="sr-only">Export scale</span>
+          <select id="export-scale">
+            <option value="1">PNG 1×</option>
+            <option value="2" selected>PNG 2×</option>
+            <option value="4">PNG 4×</option>
+          </select>
+        </label>
+        <button type="button" id="btn-export">Download map</button>
+      </div>
+      <label class="check">
+        <input type="checkbox" id="export-fit" checked>
+        Fit hull before export
+      </label>
+      <p class="export-status" id="export-status" hidden></p>
+    </div>
+
+    <button type="button" id="btn-clear" class="ghost">Clear all</button>
+    <p class="credit">Cities from <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a>
+      (CC BY 4.0). Coastlines: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>
+      (public domain), stored locally — no map API.</p>
+  </aside>
+
+  <script src="data/cities.js"></script>
+  <script src="data/world.js"></script>
+  <script src="vendor/leaflet.js"></script>
+  <script src="js/hull.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
