@@ -27,7 +27,7 @@ margin-bottom: 0.5em !important;
 <div class="row">
 <div class="col">
 <p>This is a quick note on a mostly pain-free way of saving and loading data for your Fortran code, with the best possible precision, while also
-having the option to load the data in MATLAB (or similarly in any other "high level" language) with minimal hassle. As usual, your milleage may vary, <em>caveat emptor</em> and so on.</p>
+having the option to load the data in MATLAB (or similarly in any other "high level" language) with minimal hassle. As usual, your mileage may vary, <em>caveat emptor</em> and so on.</p>
 
 <p>Say you have some fairly standard Fortran code, like this:</p>
 
@@ -78,11 +78,11 @@ crra = params(ix); ix = ix + 1;
 clear params ix;
 </code></pre>
 
-<p>What about <code>v0</code>? We know its dimensions, since we just read the parameters, including <code>zSz</code> and <code>kSz</code>, so we should use that programatically, in case we want to change the dimensions of the problem in future runs:</p>
+<p>What about <code>v0</code>? We know its dimensions, since we just read the parameters, including <code>zSz</code> and <code>kSz</code>, so we should use that programmatically, in case we want to change the dimensions of the problem in future runs:</p>
 
 <pre><code class="language-matlab">v = loadBinary('v.bin', 'float64', [zSz, kSz]);</code></pre>
 
-<p>Note that throughout I assumed that the MATLAB scripts are in the same directory/folder as the output of the Fortran code. Otherwise, adjust your paths accordingly. What about this <code>loadBinary</code> function and <code>'float64'</code>, what's that about? The function we need to write outselves, just once, for our convenience:</p>
+<p>Note that throughout I assumed that the MATLAB scripts are in the same directory/folder as the output of the Fortran code. Otherwise, adjust your paths accordingly. What about this <code>loadBinary</code> function and <code>'float64'</code>, what's that about? The function we need to write ourselves, just once, for our convenience:</p>
 
 <pre><code class="language-matlab">function [ out ] = loadBinary(fname, type, sz)
     fileid = fopen(fname, 'r');
@@ -94,17 +94,16 @@ end
 
 <p>The above function will load binary data from disk, based on the size and shape provided, then reshape it and return it to you neatly. We're not doing any error correction or attempt to gracefully recover from dimension/shape errors because if the sizes don't match, execution <em>should</em> stop with an error.</p>
 
-<p>Concerning data types and their size in bytes... Fortran's <code>real64</code> (also known as <code>DOUBLE REAL</code> to some) matches MATLAB's <code>float64</code>. Fortran's <code>INTEGER</code> goes with <code>int32</code> in MATLAB, and so on. The <a href="https://www.mathworks.com/help/matlab/ref/fread.html#btp1twt-1-precision">MATLAB documentation</a> of <code>fread</code> lists the data types. If you're trying to use the wrong data type, the size of the file will not match the <code>fread</code> call and you'll get an error from MATLAB. You can check out this handy page on the <a href="http://fortranwiki.org/fortran/show/iso_fortran_env">Fortran Wiki</a> about what predetermined data types you can find in <code>iso_fortran_env</code>, my recommendation is to stick with those, for both <code>REAL</code>s and <code>INTEGER</code>s. I am also enthusiastic about the use of <code>LOGICAL</code> variables to encode settings/flags.</p>
+<p>Concerning data types and their size in bytes... Fortran's <code>real64</code> (also known as <code>DOUBLE PRECISION</code> to some) matches MATLAB's <code>float64</code>. Fortran's <code>INTEGER</code> goes with <code>int32</code> in MATLAB, and so on. The <a href="https://www.mathworks.com/help/matlab/ref/fread.html#btp1twt-1-precision">MATLAB documentation</a> of <code>fread</code> lists the data types. If you're trying to use the wrong data type, the size of the file will not match the <code>fread</code> call and you'll get an error from MATLAB. You can check out this handy page on the <a href="https://fortranwiki.org/fortran/show/iso_fortran_env">Fortran Wiki</a> about what predetermined data types you can find in <code>iso_fortran_env</code>, my recommendation is to stick with those, for both <code>REAL</code>s and <code>INTEGER</code>s. I am also enthusiastic about the use of <code>LOGICAL</code> variables to encode settings/flags.</p>
 
 <p>A final note... if your code uses the GPU, often GPUs have far better performance in "single precision" mode, so you might want to use that instead:</p>
 
 <pre><code class="language-fortran">USE, INTRINSIC :: iso_Fortran_env, ONLY: wp => real32</code></pre>
 
-<p class="float-right"><mark><a href="../">Back to my website</a></mark></p>
+<p class="float-end"><mark><a href="../">Back to my website</a></mark></p>
 </div>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script>hljs.highlightAll();</script>
 </body>
 </html>
