@@ -13,6 +13,46 @@
 <meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff">
 <style>
 li.paper { margin-top: 0.5em !important; margin-bottom: 1.5em !important; }
+
+/* Publication sort control — inert unless the control is injected by JS */
+.pubs-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.pubs-heading > h2 { margin-bottom: 0; }
+.pub-sort-bar {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: 400;
+}
+.pub-sort-bar label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-weight: 400;
+}
+.pub-sort-bar select.form-select {
+  width: auto;
+  display: inline-block;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  font-size: 0.875rem;
+  color: #212529;
+}
+.pub-metric {
+  display: none;
+  margin-left: 0.4em;
+  color: #6c757d;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 400;
+}
+.pub-metric.is-visible { display: inline; }
 </style>
 
 <title>Gabriel Mihalache</title>
@@ -207,7 +247,7 @@ doi = "10.3386/w20896", }</pre>
 <h2 id="pubs"><i class="bi bi-bezier2"></i> Publications</h2>
 <ul class="">
 
-<li class="paper"><mark>"Monetary Policy and Sovereign Risk in Emerging Economies (NK-Default),"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="nkdefault"><mark>"Monetary Policy and Sovereign Risk in Emerging Economies (NK-Default),"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/ABM_nkdefault.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=nkdefault">PDF</a>
 <a href="https://doi.org/10.1093/qje/qjag012" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=nkdefault">DOI</a> 
 <a href="https://doi.org/10.7910/DVN/CMEFMV" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=nkdefault">Code</a> 
@@ -244,7 +284,7 @@ with <a href="https://www.cristinaarellano.com" class="text-secondary">Cristina 
   </div>
 </div></li>
 
-<li class="paper"><mark>"Insufficient or Excessive Investment Under Sovereign Default Risk,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="investment"><mark>"Insufficient or Excessive Investment Under Sovereign Default Risk,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/MS_kK.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=investment">PDF</a> 
 <a href="https://doi.org/10.1016/j.jinteco.2026.104232" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=investment">DOI</a>
 <a href="https://data.mendeley.com/datasets/fpfzd2gzf5/2" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=investment">Code</a>
@@ -280,7 +320,7 @@ author = {Ilhwan Song and Gabriel Mihalache},
   </div>
 </div></li>
 
-<li class="paper"><mark>"Default and Development,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="development"><mark>"Default and Development,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/LM_development.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=development">PDF</a> 
   <a href="https://doi.org/10.1016/j.jinteco.2025.104089" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=development">DOI</a> 
   <a href="https://data.mendeley.com/datasets/xd6hywpykg/1" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=development">Code</a>
@@ -314,7 +354,7 @@ year = "2025", }</pre>
   </div>
 </div></li>
   
-<li class="paper"><mark>"Solving default models,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="solving"><mark>"Solving default models,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/OREEF_solving.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=solving">PDF</a> <a href="https://doi.org/10.1093/acrefore/9780190625979.013.941" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=solving">DOI</a>
   <a href="https://github.com/gabrielgggg/defaultModel" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=solving">Code</a>
 <button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=solving" data-bs-toggle="modal" data-bs-target="#oreefModal">Bib</button></div><br>
@@ -343,7 +383,7 @@ doi = "10.1093/acrefore/9780190625979.013.941", }</pre>
   </div>
 </div></li>
   
-<li class="paper"><mark>"Comment on &ldquo;On Wars, Sanctions, and Sovereign Default&rdquo; by Bianchi and Sosa-Padilla,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="comment"><mark>"Comment on &ldquo;On Wars, Sanctions, and Sovereign Default&rdquo; by Bianchi and Sosa-Padilla,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="https://doi.org/10.1016/j.jmoneco.2023.10.009" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=comment">DOI</a>
 <button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=comment" data-bs-toggle="modal" data-bs-target="#crnyuModal">Bib</button>
 </div><br>
@@ -374,7 +414,7 @@ doi = "10.1016/j.jmoneco.2023.10.009", }</pre>
   </div>
 </div></li>
 
-<li class="paper"><mark>"Deadly Debt Crises: COVID-19 in Emerging Markets,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="covid"><mark>"Deadly Debt Crises: COVID-19 in Emerging Markets,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/ABM_sir.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=covid">PDF</a>
 <a href="https://doi.org/10.1093/restud/rdad058" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=covid">DOI</a>
 <a href="https://doi.org/10.5281/zenodo.7852998" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=covid">Code</a>
@@ -410,7 +450,7 @@ with <a href="https://www.cristinaarellano.com" class="text-secondary">Cristina 
   </div>
 </div></li>
 
-<li class="paper"><mark>"Bargaining over Taxes and Entitlements in the Era of Unequal Growth,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="bargaining"><mark>"Bargaining over Taxes and Entitlements in the Era of Unequal Growth,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/AKM_budget_rules.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=bargaining">PDF</a> 
 <a href="https://doi.org/10.1111/iere.12625" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=bargaining">DOI</a>
 <a href="https://github.com/gabrielgggg/StatusQuoUnequalGrowth" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=bargaining">Code</a> 
@@ -445,7 +485,7 @@ pages = "893--941", }</pre>
   </div>
 </div></li>
 
-<li class="paper"><mark>"COVID-19 Vaccination and Financial Frictions,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="vaccine"><mark>"COVID-19 Vaccination and Financial Frictions,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/ABM_vaccine.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=vaccine">PDF</a>
 <a href="https://doi.org/10.1057/s41308-022-00186-4" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=vaccine">DOI</a>
 <button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=vaccine" data-bs-toggle="modal" data-bs-target="#vaccineModal">Bib</button>
@@ -480,7 +520,7 @@ author = "Cristina Arellano and Yan Bai and Gabriel Mihalache", }</pre>
   </div>
 </div></li>
 
-<li class="paper"><mark>"Sovereign Default Resolution Through Maturity Extension,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="maturity"><mark>"Sovereign Default Resolution Through Maturity Extension,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/M_maturity_extension.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=maturity">PDF</a>
 <a href="https://doi.org/10.1016/j.jinteco.2020.103326" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=maturity">DOI</a>
 <a href="https://data.mendeley.com/datasets/92zn5cdty3/1" class="btn btn-light loglesk-event-name=Code loglesk-event-paper=maturity">Code</a>
@@ -515,7 +555,7 @@ author = "Gabriel Mihalache", }</pre>
 </div>
 </li>
 
-<li class="paper"><mark>"Default Risk, Sectoral Reallocation, and Persistent Recessions,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="reallocation"><mark>"Default Risk, Sectoral Reallocation, and Persistent Recessions,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/ABM_reallocation.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=reallocation">PDF</a>
 <a href="https://doi.org/10.1016/j.jinteco.2018.01.004" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=reallocation">DOI</a>
 <button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=reallocation" data-bs-toggle="modal" data-bs-target="#jie2018Modal">Bib</button>
@@ -550,7 +590,7 @@ author = "Cristina Arellano and Yan Bai and Gabriel Mihalache", }</pre>
 </div>
 </li>
 
-<li class="paper"><mark>"The Payment Schedule of Sovereign Debt,"</mark> <div class="btn-group btn-group-sm" role="group">
+<li class="paper" data-id="schedule"><mark>"The Payment Schedule of Sovereign Debt,"</mark> <div class="btn-group btn-group-sm" role="group">
 <a href="./docs/BKM_schedule.pdf" class="btn btn-light loglesk-event-name=PDF loglesk-event-paper=schedule">PDF</a>
 <a href="https://doi.org/10.1016/j.econlet.2017.09.003" class="btn btn-light loglesk-event-name=DOI loglesk-event-paper=schedule">DOI</a>
 <button type="button" class="btn btn-light loglesk-event-name=Bib loglesk-event-paper=schedule" data-bs-toggle="modal" data-bs-target="#el2017Modal">Bib</button>
@@ -664,6 +704,127 @@ author = "Yan Bai and Seon Tae Kim and Gabriel Mihalache", }</pre>
 </div>
 </div>
 
+<script>
+(function () {
+  /* Citation counts: Google Scholar profile user=LoNYYR4AAAAJ, 11 Nov 2026 (America/Bogota).
+     Display matches Scholar, including a trailing * when Scholar marks the count.
+     Sorting uses the numeric value only.
+     SJR: SCImago Journal Rank, latest year 2025, retrieved 11 Nov 2026.
+     Papers with no SJR use sjr: null and sort last.
+     Sort order is not persisted; the control always starts on Year. */
+  var DATA = {
+    nkdefault:     { year: 2026, citations: 123, citationsStar: true,  sjr: 33.069 },
+    investment:    { year: 2026, citations: 5,   citationsStar: false, sjr: 4.841 },
+    development:   { year: 2025, citations: 2,   citationsStar: false, sjr: 4.841 },
+    solving:       { year: 2025, citations: 19,  citationsStar: false, sjr: null },
+    comment:       { year: 2024, citations: 0,   citationsStar: false, sjr: 6.262 },
+    covid:         { year: 2024, citations: 215, citationsStar: false, sjr: 23.622 },
+    bargaining:    { year: 2023, citations: 14,  citationsStar: true,  sjr: 2.751 },
+    vaccine:       { year: 2023, citations: 4,   citationsStar: true,  sjr: 2.433 },
+    maturity:      { year: 2020, citations: 100, citationsStar: false, sjr: 4.841 },
+    reallocation:  { year: 2018, citations: 61,  citationsStar: false, sjr: 4.841 },
+    schedule:      { year: 2017, citations: 18,  citationsStar: false, sjr: 0.718 }
+  };
+
+  var h2 = document.getElementById("pubs");
+  if (!h2) return;
+  var list = h2.nextElementSibling;
+  while (list && list.tagName !== "UL") list = list.nextElementSibling;
+  if (!list) return;
+
+  var items = Array.prototype.slice.call(list.children).filter(function (el) {
+    return el.tagName === "LI" && el.classList.contains("paper");
+  });
+  items.forEach(function (li, i) {
+    li.setAttribute("data-orig", String(i));
+    var metric = document.createElement("span");
+    metric.className = "pub-metric";
+    metric.setAttribute("hidden", "");
+    var modal = li.querySelector(".modal");
+    if (modal) li.insertBefore(metric, modal);
+    else li.appendChild(metric);
+  });
+
+  var wrap = document.createElement("div");
+  wrap.className = "pubs-heading";
+  h2.parentNode.insertBefore(wrap, h2);
+  wrap.appendChild(h2);
+
+  var bar = document.createElement("div");
+  bar.className = "pub-sort-bar";
+  bar.innerHTML =
+    '<label>Sort by' +
+    ' <select class="form-select form-select-sm" aria-label="Sort published papers" autocomplete="off">' +
+    '<option value="year" selected>Year</option>' +
+    '<option value="citations">Google Scholar citations</option>' +
+    '<option value="sjr">SCImago journal ranking (SJR)</option>' +
+    "</select></label>";
+  wrap.appendChild(bar);
+  var select = bar.querySelector("select");
+  select.setAttribute("autocomplete", "off");
+
+  function metricText(key, d) {
+    if (key === "citations") {
+      return d.citations ? "Cited by " + d.citations : "";
+    }
+    if (key === "sjr") {
+      return d.sjr == null ? "" : "SJR " + d.sjr;
+    }
+    return "";
+  }
+
+  function sortKey(li, key) {
+    var id = li.getAttribute("data-id");
+    var d = DATA[id] || {};
+    var orig = parseInt(li.getAttribute("data-orig"), 10) || 0;
+    var year = d.year || 0;
+    var primary;
+    if (key === "citations") primary = d.citations || 0;
+    else if (key === "sjr") primary = d.sjr == null ? Number.NEGATIVE_INFINITY : d.sjr;
+    else primary = year;
+    return { primary: primary, year: year, orig: orig };
+  }
+
+  function applySort(key) {
+    var ranked = items.slice().sort(function (a, b) {
+      var A = sortKey(a, key), B = sortKey(b, key);
+      if (B.primary !== A.primary) return B.primary - A.primary;
+      if (B.year !== A.year) return B.year - A.year;
+      return A.orig - B.orig;
+    });
+    ranked.forEach(function (li) {
+      list.appendChild(li);
+      var d = DATA[li.getAttribute("data-id")] || {};
+      var metric = li.querySelector(".pub-metric");
+      if (!metric) return;
+      var text = metricText(key, d);
+      if (text) {
+        metric.textContent = text;
+        metric.classList.add("is-visible");
+        metric.removeAttribute("hidden");
+      } else {
+        metric.textContent = "";
+        metric.classList.remove("is-visible");
+        metric.setAttribute("hidden", "");
+      }
+    });
+  }
+
+  function resetToYear() {
+    select.value = "year";
+    applySort("year");
+  }
+
+  select.addEventListener("change", function () {
+    applySort(select.value);
+  });
+
+  /* Always start on Year. pageshow also covers back/forward (bfcache) and
+     browsers that restore <select> values after the initial script runs. */
+  resetToYear();
+  window.addEventListener("pageshow", resetToYear);
+})();
+</script>
 </body>
 </html>
 <!--
