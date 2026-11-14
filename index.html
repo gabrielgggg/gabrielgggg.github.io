@@ -29,21 +29,8 @@ li.paper { margin-top: 0.5em !important; margin-bottom: 1.5em !important; }
   color: #6c757d;
   font-weight: 400;
 }
-.pub-sort-bar label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin: 0;
-  font-weight: 400;
-}
-.pub-sort-bar select.form-select {
-  width: auto;
-  display: inline-block;
-  padding-top: 0.15rem;
-  padding-bottom: 0.15rem;
-  font-size: 0.875rem;
-  color: #212529;
-}
+.pub-sort-bar .dropdown-item.active,
+.pub-sort-bar .dropdown-item:active { background-color: #6c757d; }
 .pub-metric {
   display: none;
   margin-left: 0.4em;
@@ -748,15 +735,15 @@ author = "Yan Bai and Seon Tae Kim and Gabriel Mihalache", }</pre>
   var bar = document.createElement("div");
   bar.className = "pub-sort-bar";
   bar.innerHTML =
-    '<label>Sort by' +
-    ' <select class="form-select form-select-sm" aria-label="Sort published papers" autocomplete="off">' +
-    '<option value="year" selected>Chronological</option>' +
-    '<option value="citations">GS Citations</option>' +
-    '<option value="sjr">SJR</option>' +
-    "</select></label>";
+    '<div class="dropdown">' +
+    '<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Sort published papers">Sort</button>' +
+    '<ul class="dropdown-menu dropdown-menu-end">' +
+    '<li><button class="dropdown-item" type="button" data-sort="year">Chronological</button></li>' +
+    '<li><button class="dropdown-item" type="button" data-sort="citations">GS Citations</button></li>' +
+    '<li><button class="dropdown-item" type="button" data-sort="sjr">SJR</button></li>' +
+    "</ul></div>";
   wrap.appendChild(bar);
-  var select = bar.querySelector("select");
-  select.setAttribute("autocomplete", "off");
+  var options = Array.prototype.slice.call(bar.querySelectorAll("[data-sort]"));
 
   function metricText(key, d) {
     if (key === "citations") {
@@ -781,6 +768,12 @@ author = "Yan Bai and Seon Tae Kim and Gabriel Mihalache", }</pre>
   }
 
   function applySort(key) {
+    options.forEach(function (o) {
+      var on = o.getAttribute("data-sort") === key;
+      o.classList.toggle("active", on);
+      if (on) o.setAttribute("aria-current", "true");
+      else o.removeAttribute("aria-current");
+    });
     var ranked = items.slice().sort(function (a, b) {
       var A = sortKey(a, key), B = sortKey(b, key);
       if (B.primary !== A.primary) return B.primary - A.primary;
@@ -806,16 +799,16 @@ author = "Yan Bai and Seon Tae Kim and Gabriel Mihalache", }</pre>
   }
 
   function resetToYear() {
-    select.value = "year";
     applySort("year");
   }
 
-  select.addEventListener("change", function () {
-    applySort(select.value);
+  options.forEach(function (o) {
+    o.addEventListener("click", function () {
+      applySort(o.getAttribute("data-sort"));
+    });
   });
 
-  /* Always start on Year. pageshow also covers back/forward (bfcache) and
-     browsers that restore <select> values after the initial script runs. */
+  /* Always start on Chronological. pageshow also covers back/forward (bfcache). */
   resetToYear();
   window.addEventListener("pageshow", resetToYear);
 })();
