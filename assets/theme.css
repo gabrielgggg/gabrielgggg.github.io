@@ -1,0 +1,208 @@
+/* gmihalache.com theme: loaded after Bootstrap 5.3 */
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/assets/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/assets/fonts/source-sans-3/source-sans-3-latin-wght-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* OSU palette */
+  --gm-scarlet: #BA0C2F;
+  --gm-scarlet-rgb: 186, 12, 47;
+  --gm-scarlet-dark: #8F0A25;
+  --gm-scarlet-dark-rgb: 143, 10, 37;
+  --gm-gray-dark: #3F4443;
+  --gm-gray-dark-rgb: 63, 68, 67;
+  --gm-gray: #666666;
+  --gm-gray-rgb: 102, 102, 102;
+  --gm-gray-light: #A7B1B7;
+  --gm-gray-pale: #EEF0F1;
+  --gm-gray-faint: #F6F7F8;
+
+  /* Fonts */
+  --gm-font-fallback: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --gm-font-sans: "Source Sans 3", var(--gm-font-fallback);
+  --gm-font-size: 1.0625rem;
+  --gm-heading-weight: 600;
+
+  /* Roles (scarlet palette) */
+  --gm-text: #212325;
+  --gm-text-rgb: 33, 35, 37;
+  --gm-muted: var(--gm-gray);
+  --gm-muted-rgb: var(--gm-gray-rgb);
+  --gm-heading: var(--gm-gray-dark);
+  --gm-h2: var(--gm-scarlet);
+  --gm-icon: var(--gm-scarlet);
+  --gm-link: var(--gm-scarlet);
+  --gm-link-rgb: var(--gm-scarlet-rgb);
+  --gm-link-hover: var(--gm-scarlet-dark);
+  --gm-link-hover-rgb: var(--gm-scarlet-dark-rgb);
+  --gm-link-underline: currentColor;
+  --gm-accent: var(--gm-scarlet);
+  --gm-accent-rgb: var(--gm-scarlet-rgb);
+  --gm-focus-rgb: var(--gm-scarlet-rgb);
+  --gm-border: #D3D9DC;
+  --gm-mark-bg: #F7D3DA;
+  --gm-mark-shadow: none;
+  --gm-btn-bg: var(--gm-gray-faint);
+  --gm-btn-border: #D3D9DC;
+  --gm-btn-color: var(--gm-gray-dark);
+  --gm-btn-hover-bg: #F7D3DA;
+  --gm-btn-hover-border: var(--gm-scarlet);
+  --gm-btn-hover-color: var(--gm-scarlet-dark);
+
+  /* Bootstrap 5.3 hooks */
+  --bs-body-font-family: var(--gm-font-sans);
+  --bs-body-font-size: var(--gm-font-size);
+  --bs-body-color: var(--gm-text);
+  --bs-body-color-rgb: var(--gm-text-rgb);
+  --bs-emphasis-color: #000;
+  --bs-secondary-color: var(--gm-muted);
+  --bs-secondary-color-rgb: var(--gm-muted-rgb);
+  --bs-secondary: var(--gm-gray);
+  --bs-secondary-rgb: var(--gm-muted-rgb);
+  --bs-primary: var(--gm-scarlet);
+  --bs-primary-rgb: var(--gm-scarlet-rgb);
+  --bs-primary-text-emphasis: var(--gm-scarlet-dark);
+  --bs-primary-bg-subtle: #F7D3DA;
+  --bs-primary-border-subtle: #E8A3B1;
+  --bs-link-color: var(--gm-link);
+  --bs-link-color-rgb: var(--gm-link-rgb);
+  --bs-link-hover-color: var(--gm-link-hover);
+  --bs-link-hover-color-rgb: var(--gm-link-hover-rgb);
+  --bs-heading-color: var(--gm-heading);
+  --bs-highlight-bg: var(--gm-mark-bg);
+  --bs-highlight-color: var(--gm-text);
+  --bs-border-color: var(--gm-border);
+  --bs-code-color: var(--gm-scarlet-dark);
+  --bs-focus-ring-color: rgba(var(--gm-focus-rgb), 0.35);
+  --bs-tertiary-bg: var(--gm-gray-faint);
+}
+
+/* Type */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: var(--gm-heading-weight);
+  letter-spacing: -0.005em;
+}
+h1 small, .h1 small { font-weight: 400; }
+h2 { color: var(--gm-h2); }
+h2 > .bi, h3 > .bi { color: var(--gm-icon); }
+p, li, td, th, dd, dt { overflow-wrap: break-word; }
+
+/* Links */
+a {
+  text-decoration-color: var(--gm-link-underline);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.16em;
+  transition: color 0.12s ease-in-out, text-decoration-color 0.12s ease-in-out;
+}
+a:hover { text-decoration-color: currentColor; }
+html a.text-secondary:hover,
+html a.text-secondary:focus-visible { color: var(--gm-link-hover) !important; }
+
+/* Focus */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.dropdown-item:focus-visible,
+summary:focus-visible {
+  outline: 2px solid rgb(var(--gm-focus-rgb));
+  outline-offset: 2px;
+  border-radius: 0.2rem;
+  box-shadow: none;
+}
+
+::selection { background-color: rgba(var(--gm-accent-rgb), 0.18); }
+
+/* Paper-title highlight */
+mark, .mark {
+  background-color: var(--gm-mark-bg);
+  color: var(--gm-text);
+  box-shadow: var(--gm-mark-shadow);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 0.15em;
+}
+
+/* Section tabs */
+.nav-tabs {
+  --bs-nav-tabs-border-color: var(--gm-border);
+  --bs-nav-tabs-link-hover-border-color: var(--gm-gray-pale) var(--gm-gray-pale) var(--gm-border);
+  --bs-nav-tabs-link-active-color: var(--gm-accent);
+  --bs-nav-tabs-link-active-border-color: var(--gm-border) var(--gm-border) var(--bs-body-bg);
+}
+.nav-tabs .nav-link:hover { background-color: var(--gm-gray-faint); }
+
+/* Small paper buttons */
+.btn-light {
+  --bs-btn-color: var(--gm-btn-color);
+  --bs-btn-bg: var(--gm-btn-bg);
+  --bs-btn-border-color: var(--gm-btn-border);
+  --bs-btn-hover-color: var(--gm-btn-hover-color);
+  --bs-btn-hover-bg: var(--gm-btn-hover-bg);
+  --bs-btn-hover-border-color: var(--gm-btn-hover-border);
+  --bs-btn-active-color: var(--gm-btn-hover-color);
+  --bs-btn-active-bg: var(--gm-btn-hover-bg);
+  --bs-btn-active-border-color: var(--gm-btn-hover-border);
+  --bs-btn-focus-shadow-rgb: var(--gm-focus-rgb);
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--gm-gray-dark);
+  --bs-btn-border-color: var(--gm-gray-dark);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--gm-accent);
+  --bs-btn-hover-border-color: var(--gm-accent);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--gm-accent);
+  --bs-btn-active-border-color: var(--gm-accent);
+  --bs-btn-focus-shadow-rgb: var(--gm-focus-rgb);
+}
+
+/* Dropdowns (publication sort) */
+.dropdown-menu {
+  --bs-dropdown-link-hover-bg: var(--gm-gray-pale);
+  --bs-dropdown-link-active-bg: var(--gm-accent);
+  --bs-dropdown-link-active-color: #fff;
+}
+html .pub-sort-bar,
+html .pub-metric { color: var(--gm-muted); }
+html .pub-sort-bar .dropdown-item.active,
+html .pub-sort-bar .dropdown-item:active { background-color: var(--gm-accent); color: #fff; }
+
+/* Tables, images, code */
+@media (max-width: 575.98px) {
+  .table { font-size: 0.9375rem; }
+  .table > :not(caption) > * > * { padding: 0.4rem 0.3rem; overflow-wrap: anywhere; }
+}
+.table > thead > tr > th { border-bottom: 2px solid var(--gm-accent); }
+.img-thumbnail { border-color: var(--gm-border); }
+pre { color: var(--gm-text); }
+.modal-title { font-weight: var(--gm-heading-weight); }
+
+/* Leaflet map tool (/maps/), which does not load Bootstrap */
+html:has(#map) {
+  --accent: var(--gm-accent);
+  --accent-deep: var(--gm-link-hover);
+  font-family: var(--gm-font-sans);
+}
+html:has(#map) .panel-head h1 { font-family: var(--gm-font-sans); letter-spacing: -0.01em; }
