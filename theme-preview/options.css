@@ -49,11 +49,42 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/jetbrains-mono/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/fira-code/fira-code-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html[data-font="source-sans-3"] { --gm-font-sans: "Source Sans 3", var(--gm-font-fallback); --gm-font-size: 1.0625rem; }
 html[data-font="ibm-plex-sans"] { --gm-font-sans: "IBM Plex Sans", var(--gm-font-fallback); --gm-font-size: 1rem; }
 html[data-font="inter"] { --gm-font-sans: "Inter", var(--gm-font-fallback); --gm-font-size: 1rem; }
 html[data-font="public-sans"] { --gm-font-sans: "Public Sans", var(--gm-font-fallback); --gm-font-size: 1rem; }
 html[data-font="system"] { --gm-font-sans: var(--gm-font-fallback); --gm-font-size: 1rem; }
+
+html[data-mono="iosevka"] { --gm-font-mono: "Iosevka", ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace; }
+html[data-mono="jetbrains-mono"] { --gm-font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace; }
+html[data-mono="fira-code"] { --gm-font-mono: "Fira Code", ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace; }
+html[data-mono="ibm-plex-mono"] { --gm-font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace; }
+html[data-mono="system"] { --gm-font-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 html[data-palette="gray"] {
   --gm-h2: var(--gm-gray-dark);
@@ -87,7 +118,7 @@ html[data-palette="teal"] {
   --gm-accent: var(--gm-teal);
   --gm-accent-rgb: var(--gm-teal-rgb);
   --gm-focus-rgb: var(--gm-teal-rgb);
-  --gm-mark-bg: #F7D3DA;
+  --gm-mark-bg: rgba(186, 12, 47, 0.07);
   --gm-mark-shadow: none;
   --gm-btn-hover-bg: #D5ECEE;
   --gm-btn-hover-border: var(--gm-teal);
@@ -123,7 +154,7 @@ html[data-palette="teal"] {
 .gm-switcher-toggle:focus-visible { outline: 2px solid #BA0C2F; outline-offset: 2px; }
 .gm-switcher-panel {
   clear: both;
-  width: 16rem;
+  width: 16.5rem;
   max-width: 100%;
   margin-bottom: 0.5rem;
   padding: 0.75rem 0.85rem 0.6rem;

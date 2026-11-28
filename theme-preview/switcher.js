@@ -14,7 +14,14 @@
     ["gray", "Gray with scarlet accents"],
     ["teal", "Scarlet with teal accents"]
   ];
-  var DEFAULTS = { font: "source-sans-3", palette: "scarlet", open: true };
+  var MONOS = [
+    ["iosevka", "Iosevka"],
+    ["jetbrains-mono", "JetBrains Mono"],
+    ["fira-code", "Fira Code"],
+    ["ibm-plex-mono", "IBM Plex Mono"],
+    ["system", "System monospace"]
+  ];
+  var DEFAULTS = { font: "source-sans-3", palette: "scarlet", mono: "iosevka", open: true };
 
   function valid(list, v) {
     for (var i = 0; i < list.length; i++) if (list[i][0] === v) return true;
@@ -26,6 +33,7 @@
     return {
       font: valid(FONTS, s.font) ? s.font : DEFAULTS.font,
       palette: valid(PALETTES, s.palette) ? s.palette : DEFAULTS.palette,
+      mono: valid(MONOS, s.mono) ? s.mono : DEFAULTS.mono,
       open: typeof s.open === "boolean" ? s.open : (window.innerWidth >= 576)
     };
   }
@@ -36,6 +44,7 @@
     var root = document.documentElement;
     root.setAttribute("data-font", s.font);
     root.setAttribute("data-palette", s.palette);
+    root.setAttribute("data-mono", s.mono);
   }
 
   var state = load();
@@ -76,18 +85,23 @@
     var palSel = select("gm-switcher-palette", "Colors", PALETTES, state.palette, function (v) {
       state.palette = v; apply(state); save(state);
     });
+    var monoSel = select("gm-switcher-mono", "Monospace", MONOS, state.mono, function (v) {
+      state.mono = v; apply(state); save(state);
+    });
     var reset = document.createElement("button");
     reset.type = "button";
     reset.className = "gm-switcher-reset";
     reset.textContent = "Reset";
     reset.addEventListener("click", function () {
-      state.font = DEFAULTS.font; state.palette = DEFAULTS.palette;
+      state.font = DEFAULTS.font; state.palette = DEFAULTS.palette; state.mono = DEFAULTS.mono;
       fontSel.querySelector("select").value = state.font;
       palSel.querySelector("select").value = state.palette;
+      monoSel.querySelector("select").value = state.mono;
       apply(state); save(state);
     });
     panel.appendChild(fontSel);
     panel.appendChild(palSel);
+    panel.appendChild(monoSel);
     panel.appendChild(reset);
 
     var toggle = document.createElement("button");
@@ -113,8 +127,10 @@
     state = load(); apply(state);
     var f = document.getElementById("gm-switcher-font");
     var p = document.getElementById("gm-switcher-palette");
+    var m = document.getElementById("gm-switcher-mono");
     if (f) f.value = state.font;
     if (p) p.value = state.palette;
+    if (m) m.value = state.mono;
   });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);

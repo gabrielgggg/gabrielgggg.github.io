@@ -17,6 +17,16 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: "Iosevka";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/iosevka/iosevka-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
 :root {
   /* OSU palette */
   --gm-scarlet: #BA0C2F;
@@ -34,6 +44,7 @@
   /* Fonts */
   --gm-font-fallback: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --gm-font-sans: "Source Sans 3", var(--gm-font-fallback);
+  --gm-font-mono: "Iosevka", ui-monospace, "Cascadia Mono", "Segoe UI Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --gm-font-size: 1.0625rem;
   --gm-heading-weight: 600;
 
@@ -54,7 +65,7 @@
   --gm-accent-rgb: var(--gm-scarlet-rgb);
   --gm-focus-rgb: var(--gm-scarlet-rgb);
   --gm-border: #D3D9DC;
-  --gm-mark-bg: #F7D3DA;
+  --gm-mark-bg: rgba(186, 12, 47, 0.07);
   --gm-mark-shadow: none;
   --gm-btn-bg: var(--gm-gray-faint);
   --gm-btn-border: #D3D9DC;
@@ -65,6 +76,7 @@
 
   /* Bootstrap 5.3 hooks */
   --bs-body-font-family: var(--gm-font-sans);
+  --bs-font-monospace: var(--gm-font-mono);
   --bs-body-font-size: var(--gm-font-size);
   --bs-body-color: var(--gm-text);
   --bs-body-color-rgb: var(--gm-text-rgb);
@@ -76,7 +88,7 @@
   --bs-primary: var(--gm-scarlet);
   --bs-primary-rgb: var(--gm-scarlet-rgb);
   --bs-primary-text-emphasis: var(--gm-scarlet-dark);
-  --bs-primary-bg-subtle: #F7D3DA;
+  --bs-primary-bg-subtle: rgba(186, 12, 47, 0.08);
   --bs-primary-border-subtle: #E8A3B1;
   --bs-link-color: var(--gm-link);
   --bs-link-color-rgb: var(--gm-link-rgb);
@@ -178,6 +190,82 @@ mark, .mark {
   --bs-btn-focus-shadow-rgb: var(--gm-focus-rgb);
 }
 
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--gm-accent);
+  --bs-btn-border-color: var(--gm-accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--gm-link-hover);
+  --bs-btn-hover-border-color: var(--gm-link-hover);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--gm-link-hover);
+  --bs-btn-active-border-color: var(--gm-link-hover);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--gm-accent);
+  --bs-btn-disabled-border-color: var(--gm-accent);
+  --bs-btn-focus-shadow-rgb: var(--gm-focus-rgb);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--gm-accent);
+  --bs-btn-border-color: var(--gm-accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--gm-accent);
+  --bs-btn-hover-border-color: var(--gm-accent);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--gm-accent);
+  --bs-btn-active-border-color: var(--gm-accent);
+  --bs-btn-disabled-color: var(--gm-accent);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--gm-accent);
+  --bs-btn-focus-shadow-rgb: var(--gm-focus-rgb);
+}
+
+/* Other Bootstrap components that hardcode default blue */
+.nav-pills {
+  --bs-nav-pills-link-active-color: #fff;
+  --bs-nav-pills-link-active-bg: var(--gm-accent);
+}
+.pagination {
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(var(--gm-focus-rgb), 0.25);
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: var(--gm-accent);
+  --bs-pagination-active-border-color: var(--gm-accent);
+}
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--gm-focus-rgb), 0.25);
+}
+.list-group {
+  --bs-list-group-active-color: #fff;
+  --bs-list-group-active-bg: var(--gm-accent);
+  --bs-list-group-active-border-color: var(--gm-accent);
+}
+.progress, .progress-stacked {
+  --bs-progress-bar-bg: var(--gm-accent);
+}
+.btn-close {
+  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(var(--gm-focus-rgb), 0.25);
+}
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #E8A3B1;
+  box-shadow: 0 0 0 0.25rem rgba(var(--gm-focus-rgb), 0.25);
+}
+.form-check-input:checked,
+.form-check-input[type="checkbox"]:indeterminate {
+  background-color: rgb(var(--gm-accent-rgb));
+  border-color: rgb(var(--gm-accent-rgb));
+}
+.form-range::-webkit-slider-thumb { background-color: rgb(var(--gm-accent-rgb)); }
+.form-range::-moz-range-thumb { background-color: rgb(var(--gm-accent-rgb)); }
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(var(--gm-focus-rgb), 0.25);
+}
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(var(--gm-focus-rgb), 0.25);
+}
+
 /* Dropdowns (publication sort) */
 .dropdown-menu {
   --bs-dropdown-link-hover-bg: var(--gm-gray-pale);
@@ -196,7 +284,15 @@ html .pub-sort-bar .dropdown-item:active { background-color: var(--gm-accent); c
 }
 .table > thead > tr > th { border-bottom: 2px solid var(--gm-accent); }
 .img-thumbnail { border-color: var(--gm-border); }
-pre { color: var(--gm-text); }
+code, kbd, samp, pre, pre code {
+  font-family: var(--gm-font-mono);
+  font-variant-ligatures: none;
+}
+pre, pre code {
+  color: var(--gm-text);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
 .modal-title { font-weight: var(--gm-heading-weight); }
 
 /* Leaflet map tool (/maps/), which does not load Bootstrap */
