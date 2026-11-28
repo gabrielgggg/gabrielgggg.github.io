@@ -280,7 +280,8 @@ html .pub-sort-bar .dropdown-item:active { background-color: var(--gm-accent); c
 /* Tables, images, code */
 @media (max-width: 575.98px) {
   .table { font-size: 0.9375rem; }
-  .table > :not(caption) > * > * { padding: 0.4rem 0.3rem; overflow-wrap: anywhere; }
+  .table > :not(caption) > * > * { padding: 0.4rem 0.3rem; }
+  .table:not(.table-sm):not(.table-bordered) > :not(caption) > * > :nth-child(2) { white-space: nowrap; }
 }
 .table > thead > tr > th { border-bottom: 2px solid var(--gm-accent); }
 .img-thumbnail { border-color: var(--gm-border); }
